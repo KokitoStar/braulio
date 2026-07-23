@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#173A1F">
+
+<!-- ============================================================
+     CONFIGURACIÓN RÁPIDA PARA EL EQUIPO DE CAMPAÑA
+     ------------------------------------------------------------
+     1. DOMINIO: reemplazar "https://prensa.braulioespinosa.com"
+        en todas las etiquetas de abajo y en el JSON-LD del final.
+     2. TELÉFONO DE PRENSA: buscar "TELEFONO_PRENSA" en el <script>
+        del final y cambiar el número. Se actualiza solo en toda
+        la página (WhatsApp, ficha técnica, contacto y PDF).
+     ============================================================ -->
+
+<title>Braulio Espinosa Márquez | Precandidato a la Gobernación de Antioquia</title>
+<meta name="description" content="Perfil oficial y kit de prensa de Braulio Espinosa Márquez, precandidato a la Gobernación de Antioquia. Alcalde de Envigado 2020-2023, Diputado de Antioquia y Concejal. Biografía, trayectoria, propuestas y material descargable para medios.">
+<meta name="author" content="Braulio Espinosa Márquez">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://prensa.braulioespinosa.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Braulio Espinosa Márquez">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="Braulio Espinosa Márquez | Precandidato a la Gobernación de Antioquia">
+<meta property="og:description" content="Gestión, cercanía y resultados. Perfil oficial y kit de prensa: biografía, trayectoria, propuestas y material descargable para medios.">
+<meta property="og:url" content="https://prensa.braulioespinosa.com/">
+<meta property="og:image" content="https://prensa.braulioespinosa.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Braulio Espinosa Márquez, precandidato a la Gobernación de Antioquia">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@braulioemarquez">
+<meta name="twitter:creator" content="@braulioemarquez">
+<meta name="twitter:title" content="Braulio Espinosa Márquez | Precandidato a la Gobernación de Antioquia">
+<meta name="twitter:description" content="Gestión, cercanía y resultados. Perfil oficial y kit de prensa para medios.">
+<meta name="twitter:image" content="https://prensa.braulioespinosa.com/og-image.jpg">
+
+<!-- Iconos -->
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="./favicon-512.png">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+
+<!-- Tipografía -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════════
+   TOKENS — paleta extraída de logo.png y de la pieza de campaña
+   ══════════════════════════════════════════════════════════ */
+:root{
+  --verde-profundo:#173A1F;   /* pieza de campaña — base institucional */
+  --verde-medio:#255A31;      /* derivado                              */
+  --verde-bandera:#005C1E;    /* logo — verde vivo                     */
+  --menta:#B1D8B9;            /* pieza de campaña — acento suave       */
+  --menta-claro:#DCEBE0;      /* derivado                              */
+  --hueso:#EDEEE8;            /* pieza de campaña — fondo              */
+  --amarillo:#F5D90C;         /* logo — acento de precisión            */
+  --tinta:#12261A;
+  --gris:#57685B;
+  --linea:#CFD6CC;
+  --blanco:#fff;
+
+  --fuente-display:'Anton',Impact,'Arial Narrow',sans-serif;
+  --fuente-texto:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+
+  --ancho:1180px;
+  --radio:18px;
+  --radio-sm:10px;
+  --sombra:0 2px 4px rgba(18,38,26,.04),0 12px 32px -12px rgba(18,38,26,.16);
+  --sombra-alta:0 4px 8px rgba(18,38,26,.06),0 24px 56px -16px rgba(18,38,26,.26);
+  --nav-h:72px;
+  --escala:1;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+body{
+  margin:0;background:var(--hueso);color:var(--tinta);
+  font-family:var(--fuente-texto);
+  font-size:calc(1.0625rem * var(--escala));line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--amarillo);outline-offset:3px;border-radius:4px}
+
+.saltar{position:absolute;left:-9999px;top:0;z-index:200;background:var(--verde-profundo);color:#fff;padding:12px 20px;border-radius:0 0 10px 0;font-weight:600}
+.saltar:focus{left:0}
+
+.contenedor{width:min(100% - 40px,var(--ancho));margin-inline:auto}
+@media (max-width:600px){.contenedor{width:calc(100% - 32px)}}
+
+/* ── Encabezados de sección ─────────────────────────────── */
+.seccion{padding:clamp(56px,9vw,104px) 0;scroll-margin-top:calc(var(--nav-h) + 8px)}
+.seccion--oscura{background:var(--verde-profundo);color:var(--blanco)}
+.seccion--menta{background:var(--menta-claro)}
+.rotulo{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--verde-bandera);margin:0 0 14px
+}
+.rotulo::before{content:"";width:26px;height:3px;background:var(--amarillo);border-radius:2px}
+.seccion--oscura .rotulo{color:var(--menta)}
+.titulo{
+  font-family:var(--fuente-display);font-weight:400;
+  font-size:clamp(2rem,5.4vw,3.4rem);line-height:.98;letter-spacing:-.005em;
+  margin:0 0 18px;text-transform:none
+}
+.entradilla{font-size:clamp(1.02rem,1.9vw,1.16rem);color:var(--gris);max-width:66ch;margin:0 0 40px}
+.seccion--oscura .entradilla{color:rgba(255,255,255,.78)}
+
+/* ══════════════════════════════════════════════════════════
+   NAVEGACIÓN
+   ══════════════════════════════════════════════════════════ */
+.nav{
+  position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--linea);
+}
+.nav__fila{display:flex;align-items:center;gap:14px;height:var(--nav-h)}
+.nav__marca{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.nav__marca img{height:44px;width:auto}
+@media (min-width:600px){.nav__marca img{height:52px}}
+.nav__enlaces{display:none}
+@media (min-width:1000px){
+  .nav__enlaces{display:flex;gap:2px;margin-left:auto;align-items:center}
+  .nav__enlaces a{
+    text-decoration:none;font-size:.86rem;font-weight:500;padding:8px 11px;border-radius:8px;
+    color:var(--gris);position:relative;transition:color .18s,background .18s;white-space:nowrap
+  }
+  .nav__enlaces a:hover{color:var(--verde-profundo);background:rgba(23,58,31,.05)}
+  .nav__enlaces a[aria-current="true"]{color:var(--verde-profundo);font-weight:600}
+  .nav__enlaces a[aria-current="true"]::after{
+    content:"";position:absolute;left:11px;right:11px;bottom:2px;height:3px;
+    background:var(--amarillo);border-radius:2px
+  }
+}
+.nav__util{display:flex;align-items:center;gap:8px;margin-left:auto}
+@media (min-width:1000px){.nav__util{margin-left:14px}}
+.nav__btn{
+  width:40px;height:40px;display:grid;place-items:center;border-radius:10px;
+  border:1px solid var(--linea);background:var(--blanco);color:var(--verde-profundo);
+  transition:background .18s,border-color .18s
+}
+.nav__btn:hover{background:var(--menta-claro);border-color:var(--menta)}
+.nav__btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav__texto{display:none;font-family:var(--fuente-texto);font-weight:700;font-size:.78rem;letter-spacing:-.02em}
+@media (min-width:560px){.nav__texto{display:block}}
+.nav__menu-btn{display:grid}
+@media (min-width:1000px){.nav__menu-btn{display:none}}
+
+/* Buscador */
+.buscador{position:relative;flex:1;max-width:340px;display:none}
+@media (min-width:760px){.buscador{display:block}}
+.buscador input{
+  width:100%;height:40px;border-radius:10px;border:1px solid var(--linea);background:var(--blanco);
+  padding:0 36px 0 38px;font-family:inherit;font-size:.9rem;color:var(--tinta);transition:border-color .18s,box-shadow .18s
+}
+.buscador input::placeholder{color:#93a396}
+.buscador input:focus{border-color:var(--verde-bandera);box-shadow:0 0 0 3px rgba(0,92,30,.12);outline:none}
+.buscador__lupa{position:absolute;left:12px;top:11px;width:18px;height:18px;stroke:#93a396;fill:none;stroke-width:2;pointer-events:none}
+.buscador__x{position:absolute;right:6px;top:6px;width:28px;height:28px;border-radius:7px;display:none;place-items:center;color:var(--gris)}
+.buscador__x svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round}
+.buscador.tiene-texto .buscador__x{display:grid}
+.buscador.tiene-texto .buscador__x:hover{background:var(--hueso)}
+
+/* Menú móvil */
+.menu-movil{
+  position:fixed;inset:var(--nav-h) 0 0;background:var(--verde-profundo);z-index:99;
+  transform:translateY(-8px);opacity:0;visibility:hidden;transition:.24s ease;
+  overflow-y:auto;padding:20px 0 40px
+}
+.menu-movil[data-abierto="true"]{transform:none;opacity:1;visibility:visible}
+.menu-movil a{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:15px 4px;color:#fff;text-decoration:none;font-size:1.15rem;font-weight:500;
+  border-bottom:1px solid rgba(255,255,255,.12)
+}
+.menu-movil a span{color:var(--menta);font-size:.72rem;font-weight:700;letter-spacing:.1em}
+.menu-movil .buscador{display:block;max-width:none;margin:4px 0 18px}
+
+/* Barra de resultados de búsqueda */
+.barra-resultados{
+  position:sticky;top:var(--nav-h);z-index:98;background:var(--verde-profundo);color:#fff;
+  display:none;align-items:center;gap:12px;padding:10px 0;font-size:.86rem;font-weight:500
+}
+.barra-resultados[data-visible="true"]{display:block}
+.barra-resultados .contenedor{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.barra-resultados strong{color:var(--amarillo);font-weight:700}
+.barra-resultados .saltos{margin-left:auto;display:flex;gap:6px}
+.barra-resultados button{
+  border:1px solid rgba(255,255,255,.28);border-radius:8px;padding:5px 11px;color:#fff;
+  font-size:.8rem;font-weight:600;transition:background .18s
+}
+.barra-resultados button:hover{background:rgba(255,255,255,.14)}
+mark{background:var(--amarillo);color:var(--tinta);padding:1px 2px;border-radius:3px;font-weight:600}
+.oculto-busqueda{display:none!important}
+.resaltado-foco{box-shadow:0 0 0 3px var(--amarillo),var(--sombra)!important;border-radius:var(--radio)}
+.sin-resultados{
+  display:none;background:var(--blanco);border:2px dashed var(--linea);border-radius:var(--radio);
+  padding:36px 24px;text-align:center;margin:32px auto;max-width:620px
+}
+.sin-resultados[data-visible="true"]{display:block}
+.sin-resultados h3{font-family:var(--fuente-display);font-size:1.5rem;margin:0 0 8px;font-weight:400}
+.sin-resultados p{color:var(--gris);margin:0 0 18px}
+.sugerencias{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.sugerencias button{
+  border:1px solid var(--linea);border-radius:999px;padding:7px 15px;font-size:.85rem;font-weight:500;
+  background:var(--hueso);transition:.18s
+}
+.sugerencias button:hover{background:var(--menta);border-color:var(--menta)}
+
+/* ══════════════════════════════════════════════════════════
+   HERO
+   ══════════════════════════════════════════════════════════ */
+.hero{
+  position:relative;background:var(--verde-profundo);color:#fff;overflow:hidden;
+  padding-top:clamp(36px,6vw,60px)
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 90% at 82% 12%,rgba(0,92,30,.62) 0%,transparent 62%);
+  pointer-events:none
+}
+.hero__grid{position:relative;display:grid;gap:0;align-items:end}
+@media (min-width:900px){.hero__grid{grid-template-columns:1.06fr .94fr;gap:28px}}
+.hero__texto{padding-bottom:clamp(28px,5vw,64px);padding-top:clamp(8px,2vw,24px)}
+.hero__nombre{
+  font-family:var(--fuente-display);font-weight:400;
+  font-size:clamp(2.6rem,10.4vw,5.1rem);line-height:.86;letter-spacing:-.012em;
+  margin:0 0 18px;text-transform:uppercase
+}
+.hero__nombre span{display:block;color:var(--menta)}
+.hero__cargo{
+  display:inline-block;background:var(--amarillo);color:var(--tinta);
+  font-weight:700;font-size:clamp(.82rem,2.2vw,.96rem);letter-spacing:.02em;
+  padding:9px 17px;border-radius:999px;margin-bottom:22px
+}
+.hero__frase{
+  font-size:clamp(1.22rem,3.4vw,1.72rem);font-weight:600;line-height:1.32;
+  margin:0 0 12px;max-width:19ch;position:relative;padding-left:20px
+}
+.hero__frase::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;
+  background:var(--menta);border-radius:3px
+}
+.hero__frase em{font-style:normal;color:var(--menta)}
+.hero__lema{color:rgba(255,255,255,.72);font-size:.98rem;margin:0 0 28px;font-weight:500}
+.hero__acciones{display:flex;flex-wrap:wrap;gap:10px}
+.hero__foto{position:relative;align-self:end;justify-self:center;max-width:520px;width:100%;margin:0}
+.hero__foto::before{
+  content:"";position:absolute;left:6%;right:6%;top:14%;bottom:0;border-radius:50% 50% 0 0;
+  background:radial-gradient(60% 60% at 50% 55%,rgba(0,92,30,.85) 0%,rgba(0,92,30,0) 72%);
+  filter:blur(6px)
+}
+.hero__foto img{position:relative;width:100%;display:block}
+@media (max-width:899px){
+  .hero__foto{max-width:400px;margin-top:8px}
+  .hero__texto{padding-bottom:8px}
+}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 22px;border-radius:11px;font-weight:600;font-size:.94rem;
+  text-decoration:none;transition:transform .16s,box-shadow .16s,background .16s,color .16s;
+  border:1.5px solid transparent
+}
+.btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.btn:hover{transform:translateY(-2px)}
+.btn--principal{background:var(--amarillo);color:var(--tinta);box-shadow:0 6px 18px -6px rgba(245,217,12,.6)}
+.btn--principal:hover{box-shadow:0 12px 26px -8px rgba(245,217,12,.72)}
+.btn--claro{background:#fff;color:var(--verde-profundo)}
+.btn--fantasma{border-color:rgba(255,255,255,.4);color:#fff}
+.btn--fantasma:hover{background:rgba(255,255,255,.12)}
+.btn--verde{background:var(--verde-profundo);color:#fff}
+.btn--verde:hover{background:var(--verde-bandera)}
+.btn--borde{border-color:var(--linea);background:var(--blanco);color:var(--verde-profundo)}
+.btn--borde:hover{border-color:var(--verde-bandera);background:var(--menta-claro)}
+
+/* ── Franja de cifras ───────────────────────────────────── */
+.cifras{background:var(--verde-bandera);color:#fff;padding:0;position:relative;z-index:2}
+.cifras__grid{display:grid;grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.cifras__grid{grid-template-columns:repeat(4,1fr)}}
+.cifra{padding:26px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}
+.cifra:nth-child(2n){border-right:0}
+@media (min-width:760px){
+  .cifra{border-bottom:0;padding:32px 20px}
+  .cifra:nth-child(2n){border-right:1px solid rgba(255,255,255,.16)}
+  .cifra:last-child{border-right:0}
+}
+.cifra__valor{font-family:var(--fuente-display);font-weight:400;font-size:clamp(2.1rem,6vw,3.1rem);line-height:1;display:block}
+.cifra__etiqueta{font-size:.76rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-top:8px;display:block;line-height:1.4}
+
+/* ══════════════════════════════════════════════════════════
+   BIOGRAFÍA
+   ══════════════════════════════════════════════════════════ */
+.bio__grid{display:grid;gap:34px}
+@media (min-width:900px){.bio__grid{grid-template-columns:1.5fr 1fr;gap:56px;align-items:start}}
+.bio__texto p{margin:0 0 18px;font-size:1.04rem}
+.bio__texto p:last-child{margin-bottom:0}
+.bio__texto strong{color:var(--verde-profundo);font-weight:600}
+.ficha{background:var(--blanco);border-radius:var(--radio);padding:26px;box-shadow:var(--sombra);position:sticky;top:calc(var(--nav-h) + 20px)}
+@media (max-width:899px){.ficha{position:static}}
+.ficha h3{font-family:var(--fuente-display);font-weight:400;font-size:1.35rem;margin:0 0 18px}
+.ficha dl{margin:0;display:grid;gap:14px}
+.ficha dt{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--verde-bandera)}
+.ficha dd{margin:2px 0 0;font-size:.95rem;font-weight:500}
+.ficha__pie{margin-top:22px;padding-top:18px;border-top:1px solid var(--linea)}
+
+/* ══════════════════════════════════════════════════════════
+   TRAYECTORIA — línea de tiempo
+   ══════════════════════════════════════════════════════════ */
+.linea{position:relative;padding-left:0}
+@media (min-width:720px){.linea{padding-left:28px}}
+.linea::before{
+  content:"";position:absolute;left:9px;top:14px;bottom:60px;width:2px;background:var(--menta);border-radius:2px
+}
+@media (min-width:720px){.linea::before{left:37px}}
+.hito{position:relative;padding:0 0 20px 34px;margin-bottom:6px}
+@media (min-width:720px){.hito{padding-left:62px}}
+.hito::before{
+  content:"";position:absolute;left:2px;top:16px;width:18px;height:18px;border-radius:50%;
+  background:var(--blanco);border:4px solid var(--verde-bandera);z-index:1;transition:.2s
+}
+@media (min-width:720px){.hito::before{left:30px}}
+.hito--futuro::before{border-color:var(--amarillo);background:var(--amarillo)}
+.hito__caja{background:var(--blanco);border-radius:var(--radio);box-shadow:var(--sombra);overflow:hidden;transition:box-shadow .2s}
+.hito__caja:hover{box-shadow:var(--sombra-alta)}
+.hito__cabeza{
+  width:100%;display:flex;align-items:flex-start;gap:14px;text-align:left;
+  padding:20px 22px;transition:background .18s
+}
+.hito__cabeza:hover{background:var(--menta-claro)}
+.hito__anio{
+  font-family:var(--fuente-display);font-weight:400;font-size:clamp(1.5rem,4vw,2.05rem);
+  line-height:.95;color:var(--verde-bandera);flex-shrink:0;min-width:4.4em;letter-spacing:-.01em
+}
+.hito--futuro .hito__anio{color:var(--tinta)}
+.hito__info{flex:1;min-width:0}
+.hito__cargo{font-weight:700;font-size:1.06rem;margin:0 0 3px;line-height:1.3}
+.hito__lugar{font-size:.87rem;color:var(--gris);margin:0;font-weight:500}
+.hito__flecha{flex-shrink:0;width:26px;height:26px;display:grid;place-items:center;color:var(--verde-bandera);transition:transform .24s}
+.hito__flecha svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.hito__cabeza[aria-expanded="true"] .hito__flecha{transform:rotate(180deg)}
+.hito__cuerpo{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.hito__cabeza[aria-expanded="true"] + .hito__cuerpo{grid-template-rows:1fr}
+.hito__cuerpo > div{overflow:hidden}
+.hito__contenido{padding:0 22px 22px;border-top:1px solid var(--linea);margin-top:2px;padding-top:18px}
+.hito__contenido p{margin:0 0 14px;font-size:.97rem}
+.hito__contenido ul{margin:0;padding-left:0;list-style:none;display:grid;gap:9px}
+.hito__contenido li{position:relative;padding-left:24px;font-size:.95rem}
+.hito__contenido li::before{
+  content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;border-radius:2px;
+  background:var(--menta);transform:rotate(45deg)
+}
+.etiqueta-dato{
+  display:inline-block;background:var(--menta-claro);color:var(--verde-profundo);
+  font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px;margin:0 6px 6px 0
+}
+
+/* ══════════════════════════════════════════════════════════
+   GESTIÓN — megaproyectos y resultados
+   ══════════════════════════════════════════════════════════ */
+.obras{display:grid;gap:16px}
+@media (min-width:700px){.obras{grid-template-columns:repeat(2,1fr)}}
+.obra{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--radio);padding:24px;transition:border-color .2s,background .2s
+}
+.obra:hover{background:rgba(255,255,255,.1);border-color:var(--menta)}
+.obra__monto{font-family:var(--fuente-display);font-weight:400;font-size:clamp(1.7rem,4.6vw,2.3rem);color:var(--amarillo);line-height:1;display:block;margin-bottom:4px}
+.obra__unidad{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.62);display:block;margin-bottom:14px}
+.obra h3{font-size:1.1rem;font-weight:700;margin:0 0 8px}
+.obra p{margin:0;font-size:.93rem;color:rgba(255,255,255,.76)}
+
+.bloques{display:grid;gap:16px;margin-top:44px}
+@media (min-width:860px){.bloques{grid-template-columns:repeat(3,1fr)}}
+.bloque{background:rgba(255,255,255,.06);border-radius:var(--radio);padding:24px;border-top:4px solid var(--menta)}
+.bloque h3{font-size:1.05rem;margin:0 0 14px;font-weight:700}
+.bloque ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.bloque li{font-size:.92rem;color:rgba(255,255,255,.82);padding-left:20px;position:relative;line-height:1.55}
+.bloque li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:2px;background:var(--menta)}
+.bloque li b{color:#fff;font-weight:600}
+
+/* Reconocimientos */
+.premios{display:grid;gap:14px;margin-top:44px}
+@media (min-width:700px){.premios{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1040px){.premios{grid-template-columns:repeat(3,1fr)}}
+.premio{
+  display:flex;gap:14px;align-items:flex-start;background:var(--blanco);color:var(--tinta);
+  border-radius:var(--radio-sm);padding:18px 20px
+}
+.premio__icono{
+  flex-shrink:0;width:38px;height:38px;border-radius:10px;background:var(--menta-claro);
+  display:grid;place-items:center;color:var(--verde-bandera)
+}
+.premio__icono svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.premio h4{margin:0 0 3px;font-size:.98rem;font-weight:700;line-height:1.35}
+.premio p{margin:0;font-size:.84rem;color:var(--gris)}
+
+/* ══════════════════════════════════════════════════════════
+   PILARES
+   ══════════════════════════════════════════════════════════ */
+.banderas{display:grid;gap:18px;margin-bottom:44px}
+@media (min-width:860px){.banderas{grid-template-columns:repeat(2,1fr)}}
+.bandera{
+  background:var(--verde-profundo);color:#fff;border-radius:var(--radio);padding:30px;
+  position:relative;overflow:hidden
+}
+.bandera::after{
+  content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;
+  background:rgba(177,216,185,.12)
+}
+.bandera__eti{
+  display:inline-block;background:var(--amarillo);color:var(--tinta);font-size:.7rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px
+}
+.bandera h3{font-family:var(--fuente-display);font-weight:400;font-size:1.65rem;margin:0 0 12px;line-height:1.05;position:relative}
+.bandera p{margin:0;color:rgba(255,255,255,.82);font-size:.97rem;position:relative}
+
+.pilares{display:grid;gap:16px}
+@media (min-width:640px){.pilares{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.pilares{grid-template-columns:repeat(3,1fr)}}
+.pilar{
+  background:var(--blanco);border-radius:var(--radio);padding:26px;box-shadow:var(--sombra);
+  border-left:5px solid var(--color-pilar,var(--menta));transition:transform .2s,box-shadow .2s
+}
+.pilar:hover{transform:translateY(-4px);box-shadow:var(--sombra-alta)}
+.pilar__icono{
+  width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:color-mix(in srgb,var(--color-pilar) 20%,white);color:var(--color-pilar)
+}
+.pilar__icono svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.pilar h3{font-size:1.16rem;font-weight:700;margin:0 0 9px}
+.pilar p{margin:0;font-size:.94rem;color:var(--gris)}
+
+/* ══════════════════════════════════════════════════════════
+   FRASES CITABLES
+   ══════════════════════════════════════════════════════════ */
+.frases{display:grid;gap:14px}
+@media (min-width:800px){.frases{grid-template-columns:repeat(2,1fr)}}
+.frase{
+  background:var(--blanco);border-radius:var(--radio);padding:26px 26px 20px;box-shadow:var(--sombra);
+  display:flex;flex-direction:column;gap:14px
+}
+.frase blockquote{
+  margin:0;font-size:1.06rem;font-weight:500;line-height:1.5;color:var(--verde-profundo);
+  position:relative;padding-left:22px
+}
+.frase blockquote::before{
+  content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;background:var(--amarillo);border-radius:2px
+}
+.frase footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
+.frase cite{font-style:normal;font-size:.8rem;color:var(--gris);font-weight:500}
+
+.btn-copiar{
+  display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;
+  border:1px solid var(--linea);border-radius:8px;padding:7px 13px;color:var(--verde-profundo);
+  background:var(--blanco);transition:.18s;white-space:nowrap
+}
+.btn-copiar:hover{background:var(--menta-claro);border-color:var(--menta)}
+.btn-copiar svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.btn-copiar[data-copiado="true"]{background:var(--verde-bandera);color:#fff;border-color:var(--verde-bandera)}
+
+/* ══════════════════════════════════════════════════════════
+   PREGUNTAS FRECUENTES
+   ══════════════════════════════════════════════════════════ */
+.faq{max-width:840px;margin-inline:auto;display:grid;gap:10px}
+.faq__item{background:var(--blanco);border-radius:var(--radio-sm);overflow:hidden;box-shadow:var(--sombra)}
+.faq__pregunta{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;
+  padding:19px 22px;font-weight:600;font-size:1rem;transition:background .18s
+}
+.faq__pregunta:hover{background:var(--menta-claro)}
+.faq__mas{flex-shrink:0;width:22px;height:22px;position:relative}
+.faq__mas::before,.faq__mas::after{
+  content:"";position:absolute;background:var(--verde-bandera);border-radius:2px;transition:transform .24s
+}
+.faq__mas::before{left:0;right:0;top:10px;height:2.5px}
+.faq__mas::after{top:0;bottom:0;left:10px;width:2.5px}
+.faq__pregunta[aria-expanded="true"] .faq__mas::after{transform:rotate(90deg)}
+.faq__respuesta{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.faq__pregunta[aria-expanded="true"] + .faq__respuesta{grid-template-rows:1fr}
+.faq__respuesta > div{overflow:hidden}
+.faq__respuesta p{margin:0;padding:0 22px 22px;color:var(--gris);font-size:.96rem}
+.faq__respuesta p + p{padding-top:0}
+
+/* ══════════════════════════════════════════════════════════
+   KIT DE PRENSA
+   ══════════════════════════════════════════════════════════ */
+.kit{display:grid;gap:18px}
+@media (min-width:900px){.kit{grid-template-columns:1fr 1fr}}
+.kit__tarjeta{background:var(--blanco);border-radius:var(--radio);padding:28px;box-shadow:var(--sombra)}
+.kit__tarjeta h3{font-size:1.14rem;font-weight:700;margin:0 0 8px;display:flex;align-items:center;gap:9px}
+.kit__tarjeta h3 svg{width:19px;height:19px;stroke:var(--verde-bandera);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.kit__tarjeta > p{margin:0 0 18px;font-size:.92rem;color:var(--gris)}
+.kit__acciones{display:flex;flex-wrap:wrap;gap:9px}
+.kit__previa{
+  background:var(--hueso);border:1px solid var(--linea);border-radius:var(--radio-sm);
+  padding:17px;font-size:.9rem;line-height:1.62;margin-bottom:16px;max-height:220px;overflow-y:auto
+}
+.kit__previa dl{margin:0;display:grid;gap:7px;font-size:.87rem}
+.kit__previa dt{font-weight:700;color:var(--verde-profundo)}
+.kit__previa dd{margin:0 0 2px}
+.kit__destacado{
+  grid-column:1/-1;background:var(--verde-profundo);color:#fff;border-radius:var(--radio);
+  padding:32px;display:grid;gap:22px;align-items:center
+}
+@media (min-width:760px){.kit__destacado{grid-template-columns:1fr auto}}
+.kit__destacado h3{font-family:var(--fuente-display);font-weight:400;font-size:1.7rem;margin:0 0 8px;line-height:1.06}
+.kit__destacado p{margin:0;color:rgba(255,255,255,.78);font-size:.95rem}
+.pdf-cargando{display:none;align-items:center;gap:9px;font-size:.86rem;color:var(--menta);margin-top:10px}
+.pdf-cargando[data-visible="true"]{display:flex}
+.girador{
+  width:15px;height:15px;border:2px solid rgba(177,216,185,.35);border-top-color:var(--menta);
+  border-radius:50%;animation:girar .7s linear infinite
+}
+@keyframes girar{to{transform:rotate(360deg)}}
+
+/* ══════════════════════════════════════════════════════════
+   CONTACTO
+   ══════════════════════════════════════════════════════════ */
+.contacto{display:grid;gap:18px}
+@media (min-width:860px){.contacto{grid-template-columns:1.1fr .9fr}}
+.contacto__caja{background:var(--blanco);border-radius:var(--radio);padding:28px;box-shadow:var(--sombra)}
+.contacto__caja h3{font-size:1.14rem;margin:0 0 18px;font-weight:700}
+.dato{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--linea)}
+.dato:last-of-type{border-bottom:0}
+.dato__icono{
+  flex-shrink:0;width:36px;height:36px;border-radius:10px;background:var(--menta-claro);
+  display:grid;place-items:center;color:var(--verde-bandera)
+}
+.dato__icono svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dato dt{font-size:.71rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gris)}
+.dato dd{margin:2px 0 0;font-weight:600;font-size:.97rem;word-break:break-word}
+.dato dd a{text-decoration:none;color:var(--verde-profundo)}
+.dato dd a:hover{text-decoration:underline}
+.redes{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:6px}
+.red{
+  display:flex;align-items:center;gap:11px;padding:14px;border-radius:var(--radio-sm);
+  background:var(--hueso);text-decoration:none;font-weight:600;font-size:.9rem;transition:.18s
+}
+.red:hover{background:var(--verde-profundo);color:#fff}
+.red svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+.red span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ══════════════════════════════════════════════════════════
+   COMPARTIR + FOOTER
+   ══════════════════════════════════════════════════════════ */
+.compartir{
+  background:var(--menta-claro);border-radius:var(--radio);padding:26px;margin-top:18px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:16px;justify-content:space-between
+}
+.compartir p{margin:0;font-weight:600;font-size:.98rem}
+.compartir small{display:block;font-weight:400;color:var(--gris);font-size:.85rem;margin-top:2px}
+.compartir__botones{display:flex;flex-wrap:wrap;gap:9px}
+
+.pie{background:var(--verde-profundo);color:rgba(255,255,255,.72);padding:52px 0 32px;font-size:.88rem}
+.pie__grid{display:grid;gap:28px;margin-bottom:32px}
+@media (min-width:800px){.pie__grid{grid-template-columns:1.4fr 1fr 1fr}}
+.pie img{width:150px;background:#fff;padding:10px 12px;border-radius:11px;margin-bottom:14px}
+.pie h4{color:#fff;font-size:.75rem;letter-spacing:.11em;text-transform:uppercase;margin:0 0 14px;font-weight:700}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.pie a{color:rgba(255,255,255,.75);text-decoration:none}
+.pie a:hover{color:var(--menta);text-decoration:underline}
+.pie__base{
+  border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;flex-wrap:wrap;
+  gap:12px;justify-content:space-between;font-size:.82rem
+}
+
+.arriba{
+  position:fixed;right:16px;bottom:16px;z-index:90;width:46px;height:46px;border-radius:50%;
+  background:var(--verde-profundo);color:#fff;display:grid;place-items:center;
+  box-shadow:var(--sombra-alta);opacity:0;visibility:hidden;transform:translateY(10px);transition:.24s
+}
+.arriba[data-visible="true"]{opacity:1;visibility:visible;transform:none}
+.arriba svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* Aviso flotante (copiado / errores) */
+.aviso{
+  position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);z-index:120;
+  background:var(--verde-profundo);color:#fff;padding:13px 22px;border-radius:11px;
+  box-shadow:var(--sombra-alta);font-size:.9rem;font-weight:500;opacity:0;visibility:hidden;
+  transition:.24s;max-width:calc(100% - 32px);text-align:center
+}
+.aviso[data-visible="true"]{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+/* Animación de entrada */
+.revelar{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.revelar[data-visible="true"]{opacity:1;transform:none}
+
+/* ══════════════════════════════════════════════════════════
+   IMPRESIÓN
+   ══════════════════════════════════════════════════════════ */
+@media print{
+  :root{--nav-h:0px}
+  body{background:#fff;color:#000;font-size:11pt}
+  .nav,.menu-movil,.barra-resultados,.arriba,.aviso,.compartir,.hero__acciones,
+  .kit__acciones,.btn,.btn-copiar,.sin-resultados,.hito__flecha,.faq__mas{display:none!important}
+  .seccion{padding:18pt 0;break-inside:auto}
+  .seccion--oscura,.hero,.cifras,.pie{background:#fff!important;color:#000!important}
+  .seccion--oscura *,.hero *,.cifras *,.pie *{color:#000!important}
+  .obra,.bloque,.bandera{border:1pt solid #999!important;background:#fff!important}
+  .bandera *{color:#000!important}
+  .hito__cuerpo,.faq__respuesta{grid-template-rows:1fr!important}
+  .hito__caja,.pilar,.frase,.kit__tarjeta,.contacto__caja,.premio{box-shadow:none;border:1pt solid #ccc}
+  .revelar{opacity:1!important;transform:none!important}
+  .titulo,.hero__nombre{page-break-after:avoid}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555;word-break:break-all}
+  .hero__foto{max-width:170pt}
+}
+</style>
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+<!-- ═══════════════ NAVEGACIÓN ═══════════════ -->
+<header class="nav">
+  <div class="contenedor nav__fila">
+    <a class="nav__marca" href="#inicio" aria-label="Braulio Espinosa Márquez — Inicio">
+      <img src="./logo.png" alt="Logo de campaña de Braulio Espinosa Márquez" width="150" height="93">
+    </a>
+
+    <div class="buscador" id="buscadorEscritorio">
+      <svg class="buscador__lupa" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" class="js-buscar" placeholder="Buscar en el perfil…" aria-label="Buscar en biografía, trayectoria y propuestas" autocomplete="off">
+      <button class="buscador__x js-limpiar" type="button" aria-label="Borrar búsqueda">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <nav class="nav__enlaces" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#biografia">Biografía</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#gestion">Gestión</a>
+      <a href="#propuestas">Propuestas</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#prensa">Prensa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="nav__util">
+      <button class="nav__btn" type="button" id="btnTexto" aria-label="Aumentar el tamaño del texto" title="Tamaño del texto">
+        <span class="nav__texto" aria-hidden="true">A<sup>+</sup></span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M4 20 12 4l8 16M7 14h10"/></svg>
+      </button>
+      <button class="nav__btn nav__menu-btn" type="button" id="btnMenu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menuMovil">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menú móvil -->
+<div class="menu-movil" id="menuMovil" data-abierto="false">
+  <div class="contenedor">
+    <div class="buscador" id="buscadorMovil">
+      <svg class="buscador__lupa" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" class="js-buscar" placeholder="Buscar en el perfil…" aria-label="Buscar en el perfil" autocomplete="off">
+      <button class="buscador__x js-limpiar" type="button" aria-label="Borrar búsqueda">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Navegación móvil">
+      <a href="#inicio">Inicio <span>01</span></a>
+      <a href="#biografia">Biografía <span>02</span></a>
+      <a href="#trayectoria">Trayectoria <span>03</span></a>
+      <a href="#gestion">Gestión <span>04</span></a>
+      <a href="#propuestas">Propuestas <span>05</span></a>
+      <a href="#preguntas">Preguntas frecuentes <span>06</span></a>
+      <a href="#prensa">Kit de prensa <span>07</span></a>
+      <a href="#contacto">Contacto <span>08</span></a>
+    </nav>
+  </div>
+</div>
+
+<!-- Barra de resultados de búsqueda -->
+<div class="barra-resultados" id="barraResultados" role="status" aria-live="polite" data-visible="false">
+  <div class="contenedor">
+    <span id="textoResultados"></span>
+    <span class="saltos">
+      <button type="button" id="btnAnterior">↑ Anterior</button>
+      <button type="button" id="btnSiguiente">Siguiente ↓</button>
+      <button type="button" id="btnCerrarBusqueda">Limpiar</button>
+    </span>
+  </div>
+</div>
+
+<main id="contenido">
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="inicio">
+  <div class="contenedor hero__grid">
+    <div class="hero__texto">
+      <h1 class="hero__nombre">Braulio<span>Espinosa</span></h1>
+      <p class="hero__cargo">Precandidato a la Gobernación de Antioquia</p>
+      <p class="hero__frase">Gobernaremos <em>desde el territorio,</em> no desde el escritorio.</p>
+      <p class="hero__lema">Gestión, cercanía y resultados.</p>
+      <div class="hero__acciones">
+        <a class="btn btn--principal" href="#prensa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          Descargar kit de prensa
+        </a>
+        <a class="btn btn--fantasma" href="#biografia">Conocer su perfil</a>
+      </div>
+    </div>
+    <figure class="hero__foto">
+      <picture>
+        <source srcset="./braulio-recorte.webp" type="image/webp">
+        <img src="./braulio-recorte.png" alt="Retrato oficial de Braulio Espinosa Márquez, precandidato a la Gobernación de Antioquia" width="1100" height="1100" fetchpriority="high" decoding="async">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══════════════ CIFRAS ═══════════════ -->
+<section class="cifras" aria-label="Cifras clave de su trayectoria">
+  <div class="contenedor">
+    <div class="cifras__grid">
+      <div class="cifra">
+        <span class="cifra__valor js-contar" data-hasta="45239" data-separador="1">0</span>
+        <span class="cifra__etiqueta">Votos como alcalde de Envigado</span>
+      </div>
+      <div class="cifra">
+        <span class="cifra__valor js-contar" data-hasta="42" data-sufijo="%">0</span>
+        <span class="cifra__etiqueta">De la votación en 2019</span>
+      </div>
+      <div class="cifra">
+        <span class="cifra__valor js-contar" data-hasta="186">0</span>
+        <span class="cifra__etiqueta">Obras entregadas 2020–2023</span>
+      </div>
+      <div class="cifra">
+        <span class="cifra__valor js-contar" data-hasta="15" data-sufijo=" años">0</span>
+        <span class="cifra__etiqueta">En cargos de elección popular</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BIOGRAFÍA ═══════════════ -->
+<section class="seccion" id="biografia">
+  <div class="contenedor">
+    <p class="rotulo">Quién es</p>
+    <h2 class="titulo">Un ingeniero y abogado<br>al frente de lo público</h2>
+
+    <div class="bio__grid">
+      <div class="bio__texto" data-grupo="biografía">
+        <div class="js-buscable">
+          <p><strong>Braulio Alonso Espinosa Márquez</strong> es un dirigente político antioqueño con quince años de experiencia continua en cargos de elección popular. Su vida pública está anclada en Envigado, la ciudad donde estudió, donde fue líder estudiantil, concejal y alcalde, y donde hoy reside.</p>
+        </div>
+        <div class="js-buscable">
+          <p>Es <strong>Ingeniero de Sistemas y Abogado</strong> de la Institución Universitaria de Envigado, una combinación poco común en la política colombiana. La ingeniería le dio el hábito de medir, optimizar y ordenar procesos; el derecho, el terreno para moverse en la contratación estatal y el derecho administrativo sin depender de terceros. Complementó esa base con especializaciones en <strong>Gestión Pública Municipal</strong> en la Universidad EAFIT, y en <strong>Gobierno y Desarrollo Local</strong> y <strong>Alta Gerencia Pública</strong> en la Unión Iberoamericana de Municipalistas, en Granada, España, donde actualmente cursa una maestría en Dirección y Gestión Pública Local.</p>
+        </div>
+        <div class="js-buscable">
+          <p>Su carrera empezó desde abajo. Fue líder estudiantil en la Institución Universitaria de Envigado antes de llegar al Concejo Municipal, donde presidió la corporación y, sobre todo, la <strong>Comisión de Presupuesto</strong>: el lugar donde se aprueban las rentas, los gastos, las vigencias futuras y los cupos de endeudamiento del municipio. Ese conocimiento del músculo financiero explicaría después su forma de gobernar.</p>
+        </div>
+        <div class="js-buscable">
+          <p>En 2016 llegó a la <strong>Asamblea Departamental de Antioquia</strong>, donde amplió su mirada más allá del Valle de Aburrá y estructuró su trabajo alrededor de seis ejes: educación, salud, agricultura, desarrollo, seguridad y deporte. En 2019 fue elegido <strong>Alcalde de Envigado</strong> con 45.239 votos, encabezando la coalición <em>Aquí Sumamos Todos</em>, que reunió los avales del Partido Liberal, el Partido Conservador y Cambio Radical.</p>
+        </div>
+        <div class="js-buscable">
+          <p>Gobernó durante la pandemia y aun así cerró su mandato con <strong>186 obras entregadas</strong> y con el reconocimiento como Mejor Alcalde del Área Metropolitana del Valle de Aburrá en la encuesta de El Colombiano de 2021. Hoy es <strong>precandidato a la Gobernación de Antioquia</strong>, con una propuesta centrada en el ordenamiento territorial y en darles peso real a las subregiones.</p>
+        </div>
+        <div class="js-buscable">
+          <p>En lo personal, es padre de <strong>Sofía y Sebastián</strong>, a quienes ha señalado públicamente como su principal motivación, e hijo de una familia de cuatro hermanos formada, según sus propias palabras, con trabajo honesto y dedicación.</p>
+        </div>
+      </div>
+
+      <aside class="ficha">
+        <h3>Ficha rápida</h3>
+        <dl>
+          <div><dt>Nombre completo</dt><dd>Braulio Alonso Espinosa Márquez</dd></div>
+          <div><dt>Aspiración</dt><dd>Gobernación de Antioquia</dd></div>
+          <div><dt>Fecha de nacimiento</dt><dd>14 de octubre de 1973</dd></div>
+          <div><dt>Residencia</dt><dd>Envigado, Antioquia</dd></div>
+          <div><dt>Profesión</dt><dd>Ingeniero de Sistemas y Abogado</dd></div>
+          <div><dt>Último cargo</dt><dd>Alcalde de Envigado (2020–2023)</dd></div>
+        </dl>
+        <div class="ficha__pie">
+          <button class="btn-copiar" type="button" data-copiar="ficha">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar ficha técnica
+          </button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TRAYECTORIA ═══════════════ -->
+<section class="seccion seccion--menta" id="trayectoria">
+  <div class="contenedor">
+    <p class="rotulo">Trayectoria</p>
+    <h2 class="titulo">Quince años de servicio<br>público, en orden</h2>
+    <p class="entradilla">De líder estudiantil a alcalde. Toque cada etapa para ver los cargos, las responsabilidades y los resultados de cada periodo.</p>
+
+    <div class="linea" data-grupo="trayectoria">
+
+      <article class="hito js-buscable">
+        <div class="hito__caja">
+          <button class="hito__cabeza" type="button" aria-expanded="false" aria-controls="hito-1">
+            <span class="hito__anio">2008<br>2015</span>
+            <span class="hito__info">
+              <span class="hito__cargo">Concejal de Envigado</span>
+              <span class="hito__lugar">Dos periodos · Concejo Municipal de Envigado</span>
+            </span>
+            <span class="hito__flecha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="hito__cuerpo" id="hito-1"><div><div class="hito__contenido">
+            <p>Ocho años en el cabildo, donde pasó del debate general al manejo de las comisiones más técnicas de la corporación.</p>
+            <ul>
+              <li><b>Presidente del Concejo Municipal</b>, dictando la agenda de debates y las relaciones entre bancadas.</li>
+              <li><b>Presidente de la Comisión de Presupuesto</b>, el órgano por donde pasan el presupuesto de rentas y gastos, las vigencias futuras, las exenciones tributarias y los cupos de endeudamiento.</li>
+              <li><b>Presidente de la Comisión Accidental de Educación</b>, enfocada en infraestructura educativa y retención escolar.</li>
+              <li>Apoyo al deporte y aumento de recursos para incentivos a la educación superior.</li>
+              <li>Convenios con la Institución Universitaria de Envigado, el Tecnológico de Artes Débora Arango y el Centro de Formación Integral para el Trabajo (CEFIT).</li>
+              <li>Acompañamiento a población desplazada, personas en condición de discapacidad y madres cabeza de familia.</li>
+            </ul>
+            <p style="margin-top:16px"><span class="etiqueta-dato">Distinción “Dirigente revelación” — Círculo de Periodistas de Envigado (CIPE)</span></p>
+          </div></div></div>
+        </div>
+      </article>
+
+      <article class="hito js-buscable">
+        <div class="hito__caja">
+          <button class="hito__cabeza" type="button" aria-expanded="false" aria-controls="hito-2">
+            <span class="hito__anio">2016<br>2019</span>
+            <span class="hito__info">
+              <span class="hito__cargo">Diputado de Antioquia</span>
+              <span class="hito__lugar">Asamblea Departamental de Antioquia</span>
+            </span>
+            <span class="hito__flecha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="hito__cuerpo" id="hito-2"><div><div class="hito__contenido">
+            <p>El salto de lo municipal a lo departamental. Su trabajo se organizó alrededor de seis ejes rectores: educación, salud, agricultura, desarrollo, seguridad y deporte.</p>
+            <ul>
+              <li><b>Ampliación de la cobertura de internet</b> a zonas alejadas y rurales del departamento.</li>
+              <li>Inclusión de la <b>pavimentación de vías terciarias</b> en el Plan de Desarrollo Departamental.</li>
+              <li>Defensa de la <b>integridad territorial de Antioquia</b> en la controversia limítrofe de Belén de Bajirá.</li>
+              <li>Lideró la <b>Comisión Accidental de la Asamblea</b> durante la emergencia del embalse de Hidroituango.</li>
+              <li>Miembro de la <b>Comisión de Hacienda y Crédito Público</b> departamental.</li>
+              <li>Lideró la defensa en primer debate del <b>Proyecto de Ordenanza N.º 17</b>, que permitía a los concejos de los 125 municipios adoptar la Estampilla Politécnico Colombiano Jaime Isaza Cadavid para financiar educación superior.</li>
+              <li>Consolidación de programas sociales dirigidos a campesinos.</li>
+            </ul>
+          </div></div></div>
+        </div>
+      </article>
+
+      <article class="hito js-buscable">
+        <div class="hito__caja">
+          <button class="hito__cabeza" type="button" aria-expanded="false" aria-controls="hito-3">
+            <span class="hito__anio">2020<br>2023</span>
+            <span class="hito__info">
+              <span class="hito__cargo">Alcalde de Envigado</span>
+              <span class="hito__lugar">Coalición “Aquí Sumamos Todos” · 45.239 votos</span>
+            </span>
+            <span class="hito__flecha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="hito__cuerpo" id="hito-3"><div><div class="hito__contenido">
+            <p>Llegó a la Alcaldía encabezando una coalición que reunió al Partido Liberal, al Partido Conservador y a Cambio Radical, con cerca del 42 % de la votación. Su programa se convirtió en el Plan de Desarrollo <em>Juntos Sumamos por Envigado</em>.</p>
+            <ul>
+              <li><b>186 obras entregadas</b>, por encima de las 110 pactadas inicialmente en el Plan de Desarrollo.</li>
+              <li>Manejo completo de la <b>emergencia sanitaria por COVID-19</b> sin detener la ejecución de obra pública.</li>
+              <li>Perfeccionamiento del modelo de <b>cierre financiero multifuente</b>: cofinanciación con el Área Metropolitana, el Gobierno Nacional y crédito público para no depender solo de recursos propios.</li>
+              <li>Ejecución directa de más de <b>20 obras barriales con las Juntas de Acción Comunal</b>.</li>
+              <li>Hoja de ruta interinstitucional con EPM para acueducto, alcantarillado y compensación ambiental.</li>
+              <li>Terminación unilateral del contrato del <b>Tramo 2B de Metroplús</b> ante incumplimientos del consorcio constructor, y articulación con la Presidencia, el Ministerio de Transporte y las alcaldías de Medellín e Itagüí.</li>
+              <li>Apertura de canales institucionales directos y promoción de <b>veedurías ciudadanas</b>.</li>
+            </ul>
+            <p style="margin-top:16px">
+              <span class="etiqueta-dato">Mejor Alcalde del Área Metropolitana 2021 — El Colombiano</span>
+              <span class="etiqueta-dato">Plan de Desarrollo destacado por el DNP</span>
+            </p>
+          </div></div></div>
+        </div>
+      </article>
+
+      <article class="hito hito--futuro js-buscable">
+        <div class="hito__caja">
+          <button class="hito__cabeza" type="button" aria-expanded="false" aria-controls="hito-4">
+            <span class="hito__anio">Hoy</span>
+            <span class="hito__info">
+              <span class="hito__cargo">Precandidato a la Gobernación de Antioquia</span>
+              <span class="hito__lugar">Opción pluripartidista, incluyente y participativa</span>
+            </span>
+            <span class="hito__flecha"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="hito__cuerpo" id="hito-4"><div><div class="hito__contenido">
+            <p>Tras cerrar su mandato en Envigado, se perfila como precandidato a la Gobernación de Antioquia con una propuesta construida sobre dos ideas fuerza: planificar el territorio con rigor jurídico y devolverles capacidad de decisión a las subregiones.</p>
+            <ul>
+              <li>Aspiración presentada como una <b>opción pluripartidista</b>, sin dependencia de una sola colectividad.</li>
+              <li>Recorrido permanente por las nueve subregiones del departamento.</li>
+              <li>Énfasis en el <b>Oriente Antioqueño</b>, la subregión con el crecimiento demográfico más acelerado y con mayor necesidad de un plan vial primario.</li>
+            </ul>
+          </div></div></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GESTIÓN ═══════════════ -->
+<section class="seccion seccion--oscura" id="gestion">
+  <div class="contenedor">
+    <p class="rotulo">Gestión comprobable</p>
+    <h2 class="titulo">Lo que se ejecutó<br>en Envigado</h2>
+    <p class="entradilla">Cuatro megaproyectos concentran buena parte de la inversión del periodo 2020–2023. Estas son las cifras y el problema que resolvió cada uno.</p>
+
+    <div class="obras" data-grupo="gestión">
+      <article class="obra js-buscable">
+        <span class="obra__monto">$124.000</span>
+        <span class="obra__unidad">Millones de pesos</span>
+        <h3>Intercambio Vial La Ayurá</h3>
+        <p>Megaobra heredada que dependía de voluntad política para salir adelante. Rompió el cuello de botella histórico en el sur del Valle de Aburrá y mejoró la competitividad logística de la zona.</p>
+      </article>
+      <article class="obra js-buscable">
+        <span class="obra__monto">$93.000</span>
+        <span class="obra__unidad">Millones de pesos</span>
+        <h3>Nuevo Palacio Municipal</h3>
+        <p>La Alcaldía operaba dispersa en 16 sedes arrendadas. El edificio las unificó. La financiación fue mayoritariamente externa: 74.000 millones del Área Metropolitana, 7.000 del Gobierno Nacional, 14.000 en crédito y solo 4.500 en recursos propios.</p>
+      </article>
+      <article class="obra js-buscable">
+        <span class="obra__monto">$30.000</span>
+        <span class="obra__unidad">Millones de pesos (aprox.)</span>
+        <h3>Tramo 2B de Metroplús</h3>
+        <p>Obra con más de dos años de retraso por hallazgos arqueológicos e incumplimientos del contratista. Se declaró la terminación unilateral del contrato y se renegoció la viabilidad del corredor con la Nación y los municipios vecinos.</p>
+      </article>
+      <article class="obra js-buscable">
+        <span class="obra__monto">$17.517</span>
+        <span class="obra__unidad">Millones de pesos</span>
+        <h3>Reconstrucción de la Plaza de Mercado</h3>
+        <p>Recuperación estructural y patrimonial de un espacio tradicional del municipio, con cumplimiento de normas de sismorresistencia y peatonalización de la Carrera 40A.</p>
+      </article>
+    </div>
+
+    <div class="bloques" data-grupo="gestión">
+      <article class="bloque js-buscable">
+        <h3>Respuesta a la pandemia</h3>
+        <ul>
+          <li>Se <b>triplicó casi la capacidad de camas UCI</b> anticipándose a los picos de contagio.</li>
+          <li>Nueva <b>torre de hospitalización</b> en el Hospital Manuel Uribe Ángel, con 120 camas definitivas.</li>
+          <li><b>Planta propia de oxígeno medicinal</b> instalada durante el desabastecimiento nacional.</li>
+          <li>Pionero nacional en el <b>puesto de vacunación masivo multivehicular</b>.</li>
+        </ul>
+      </article>
+      <article class="bloque js-buscable">
+        <h3>Agua, vías y ambiente</h3>
+        <ul>
+          <li>Modernización de la <b>Planta La Ayurá</b>, con capacidad de 6 m³/s de agua potable.</li>
+          <li>Expansión del <b>acueducto El Capiro</b> para asegurar suministro a 15.000 nuevas viviendas.</li>
+          <li><b>7.382 metros</b> de tubería obsoleta repuesta y repavimentación de 23 tramos viales.</li>
+          <li>Compensación forestal de <b>5.510 árboles</b>.</li>
+        </ul>
+      </article>
+      <article class="bloque js-buscable">
+        <h3>Barrio y comunidad</h3>
+        <ul>
+          <li>Más de <b>20 obras barriales</b> ejecutadas directamente con las Juntas de Acción Comunal.</li>
+          <li><b>$4.042 millones</b> gestionados con la Gobernación para la cancha de Las Palmas, en zona rural.</li>
+          <li><b>$1.843 millones</b> para infraestructura deportiva en el barrio Zúñiga.</li>
+          <li>Matriz digital institucional y veedurías ciudadanas abiertas.</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="rotulo" style="margin-top:56px">Reconocimientos</p>
+    <div class="premios" data-grupo="gestión">
+      <article class="premio js-buscable">
+        <span class="premio__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.9 7 22l5-3 5 3-1.2-8.1"/></svg></span>
+        <div><h4>Galardón Orgullo de Colombia</h4><p>Fundación Reconciliación Futuro de Colombia, en el Congreso de la República.</p></div>
+      </article>
+      <article class="premio js-buscable">
+        <span class="premio__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6m12 5h1.5a2.5 2.5 0 0 0 0-5H18M6 4h12v5a6 6 0 0 1-12 0zM12 15v4m-4 2h8"/></svg></span>
+        <div><h4>Mejor Alcalde del Área Metropolitana</h4><p>Encuesta del periódico El Colombiano, 2021.</p></div>
+      </article>
+      <article class="premio js-buscable">
+        <span class="premio__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1 7.8 7.7 7.8-7.7 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+        <div><h4>Gobernante más comprometido con la niñez</h4><p>Corporación Juego y Niñez, tres años consecutivos.</p></div>
+      </article>
+      <article class="premio js-buscable">
+        <span class="premio__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c3.3 2 8.7 2 12 0v-5"/></svg></span>
+        <div><h4>Buenas Prácticas en el PAE</h4><p>Noche de Los Mejores 2021, Ministerio de Educación Nacional.</p></div>
+      </article>
+      <article class="premio js-buscable">
+        <span class="premio__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
+        <div><h4>Mejor gestión de la educación inicial</h4><p>Ministerio de Educación Nacional, 2021.</p></div>
+      </article>
+      <article class="premio js-buscable">
+        <span class="premio__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V6a2 2 0 0 1 2-2h13v16H6.5A2.5 2.5 0 0 0 4 22.5z"/><path d="M9 8h6"/></svg></span>
+        <div><h4>Estrategias pedagógicas para la Jornada Única</h4><p>Ministerio de Educación Nacional, 2021.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROPUESTAS ═══════════════ -->
+<section class="seccion" id="propuestas">
+  <div class="contenedor">
+    <p class="rotulo">Propuestas</p>
+    <h2 class="titulo">Dos banderas<br>y seis frentes de trabajo</h2>
+    <p class="entradilla">Su programa para Antioquia parte de un diagnóstico: el país creció sin planificar el suelo. De ahí salen sus dos apuestas centrales, sostenidas sobre los seis ejes que ha trabajado desde la Asamblea.</p>
+
+    <div class="banderas" data-grupo="propuestas">
+      <article class="bandera js-buscable">
+        <span class="bandera__eti">Bandera 1</span>
+        <h3>Ordenamiento territorial con rigor</h3>
+        <p>Sostiene que Colombia es un “estado mal planificado” y que la expansión urbana se hizo sin herramientas jurídicas serias, derivando en una fragmentación indebida del uso del suelo. Su tesis: las ciudades no pueden crecer de manera indefinida y el ordenamiento debe fijar límites reales. El foco departamental está en el Oriente Antioqueño, la subregión de crecimiento más acelerado, que necesita con urgencia un plan integral de infraestructura vial primaria.</p>
+      </article>
+      <article class="bandera js-buscable">
+        <span class="bandera__eti">Bandera 2</span>
+        <h3>Provincias: descentralización real</h3>
+        <p>Plantea reservas frente a las Áreas Metropolitanas por los desequilibrios de poder que generan, y propone en su lugar la figura de las <em>Provincias</em> como entidad territorial con autonomía propia. El objetivo es que las subregiones antioqueñas participen de forma equitativa de las rentas departamentales y tengan capacidad de decisión frente al centralismo de Medellín.</p>
+      </article>
+    </div>
+
+    <div class="pilares" data-grupo="propuestas">
+      <article class="pilar js-buscable" style="--color-pilar:#005C1E">
+        <span class="pilar__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5zM6 12v5c3.3 2 8.7 2 12 0v-5"/></svg></span>
+        <h3>Educación</h3>
+        <p>Financiación estable para la educación superior pública, con herramientas como la estampilla del Politécnico Colombiano. Continuidad de lo premiado en Envigado: alimentación escolar, educación inicial y jornada única.</p>
+      </article>
+      <article class="pilar js-buscable" style="--color-pilar:#C0392B">
+        <span class="pilar__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.7 8.8-8.7a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+        <h3>Salud</h3>
+        <p>Ampliar capacidad instalada antes de que llegue la crisis, no después. El modelo aplicado en el Hospital Manuel Uribe Ángel —camas UCI, torre nueva y autonomía de oxígeno— llevado a la red hospitalaria del departamento.</p>
+      </article>
+      <article class="pilar js-buscable" style="--color-pilar:#7A9E2E">
+        <span class="pilar__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V9M12 9C12 5 15 2 21 2c0 6-3 9-9 7zM12 13C12 9.7 9.5 7 4 7c0 5.3 2.5 8 8 6z"/></svg></span>
+        <h3>Agricultura y campo</h3>
+        <p>Vías terciarias pavimentadas y conectividad rural como condición para que el campesinado pueda vender. Consolidación de los programas sociales dirigidos a campesinos que impulsó desde la Asamblea.</p>
+      </article>
+      <article class="pilar js-buscable" style="--color-pilar:#1F6F8B">
+        <span class="pilar__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span>
+        <h3>Desarrollo e infraestructura</h3>
+        <p>Cierre financiero multifuente aplicado a escala departamental: combinar recursos propios, cofinanciación nacional, regalías y crédito para ejecutar obra grande sin ahogar las finanzas del departamento.</p>
+      </article>
+      <article class="pilar js-buscable" style="--color-pilar:#173A1F">
+        <span class="pilar__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <h3>Seguridad</h3>
+        <p>Seguridad entendida como presencia institucional y no solo como pie de fuerza, con articulación entre el departamento, los municipios y las autoridades nacionales en las subregiones más presionadas.</p>
+      </article>
+      <article class="pilar js-buscable" style="--color-pilar:#D9A404">
+        <span class="pilar__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v6m0 6v6M3.6 8l5.6 3.2m5.6 3.2 5.6 3.2M20.4 8l-5.6 3.2M9.2 14.4 3.6 17.6"/></svg></span>
+        <h3>Deporte</h3>
+        <p>Escenarios deportivos en zonas rurales y barrios, financiados con gestión ante el departamento y la Nación, como los ejecutados en Las Palmas y Zúñiga durante su alcaldía.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FRASES ═══════════════ -->
+<section class="seccion seccion--menta" aria-labelledby="tituloFrases">
+  <div class="contenedor">
+    <p class="rotulo">Para citar</p>
+    <h2 class="titulo" id="tituloFrases">Frases del candidato</h2>
+    <p class="entradilla">Declaraciones textuales listas para usar. Cada una se copia con un clic, con su atribución.</p>
+
+    <div class="frases" data-grupo="frases">
+      <article class="frase js-buscable">
+        <blockquote>Gobernaremos desde el territorio, no desde el escritorio.</blockquote>
+        <footer>
+          <cite>Braulio Espinosa Márquez</cite>
+          <button class="btn-copiar" type="button" data-copiar="frase">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
+        </footer>
+      </article>
+      <article class="frase js-buscable">
+        <blockquote>La política debe hacerse con y para la comunidad, trabajando de manera mancomunada para fortalecer nuestro territorio.</blockquote>
+        <footer>
+          <cite>Braulio Espinosa Márquez</cite>
+          <button class="btn-copiar" type="button" data-copiar="frase">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
+        </footer>
+      </article>
+      <article class="frase js-buscable">
+        <blockquote>Estoy convencido de que escuchar, unir y servir es el camino para construir un mejor futuro.</blockquote>
+        <footer>
+          <cite>Braulio Espinosa Márquez</cite>
+          <button class="btn-copiar" type="button" data-copiar="frase">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
+        </footer>
+      </article>
+      <article class="frase js-buscable">
+        <blockquote>Camino el departamento con el corazón puesto en su gente, con liderazgo, experiencia y vocación de servicio.</blockquote>
+        <footer>
+          <cite>Braulio Espinosa Márquez</cite>
+          <button class="btn-copiar" type="button" data-copiar="frase">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PREGUNTAS FRECUENTES ═══════════════ -->
+<section class="seccion" id="preguntas">
+  <div class="contenedor">
+    <p class="rotulo">Preguntas frecuentes</p>
+    <h2 class="titulo">Lo que más nos preguntan<br>los medios</h2>
+
+    <div class="faq" data-grupo="preguntas">
+      <article class="faq__item js-buscable">
+        <button class="faq__pregunta" type="button" aria-expanded="false" aria-controls="faq-1">
+          ¿A qué cargo aspira Braulio Espinosa Márquez?
+          <span class="faq__mas" aria-hidden="true"></span>
+        </button>
+        <div class="faq__respuesta" id="faq-1"><div>
+          <p>Es precandidato a la Gobernación de Antioquia. Presenta su aspiración como una opción pluripartidista, incluyente y participativa, es decir, sin depender del aval de una sola colectividad. Su último cargo de elección popular fue la Alcaldía de Envigado, que ejerció entre 2020 y 2023.</p>
+        </div></div>
+      </article>
+
+      <article class="faq__item js-buscable">
+        <button class="faq__pregunta" type="button" aria-expanded="false" aria-controls="faq-2">
+          ¿Cuál es su trayectoria en el servicio público?
+          <span class="faq__mas" aria-hidden="true"></span>
+        </button>
+        <div class="faq__respuesta" id="faq-2"><div>
+          <p>Quince años continuos en cargos de elección popular. Fue Concejal de Envigado durante dos periodos, entre 2008 y 2015, donde presidió el Concejo y la Comisión de Presupuesto. Luego fue Diputado de la Asamblea Departamental de Antioquia entre 2016 y 2019. Y entre 2020 y 2023 fue Alcalde de Envigado, elegido con 45.239 votos. Antes de todo eso fue líder estudiantil en la Institución Universitaria de Envigado.</p>
+        </div></div>
+      </article>
+
+      <article class="faq__item js-buscable">
+        <button class="faq__pregunta" type="button" aria-expanded="false" aria-controls="faq-3">
+          ¿Cuáles son sus principales banderas para Antioquia?
+          <span class="faq__mas" aria-hidden="true"></span>
+        </button>
+        <div class="faq__respuesta" id="faq-3"><div>
+          <p>Dos. La primera es el ordenamiento territorial: sostiene que el país creció sin planificar el uso del suelo y que las ciudades necesitan límites reales de expansión, con el Oriente Antioqueño como prioridad por su ritmo de crecimiento. La segunda es la descentralización a través de la figura de las Provincias, para que las subregiones tengan autonomía y participen equitativamente de las rentas del departamento.</p>
+          <p>Esas dos apuestas se apoyan en seis frentes de trabajo que viene sosteniendo desde la Asamblea: educación, salud, agricultura, desarrollo, seguridad y deporte.</p>
+        </div></div>
+      </article>
+
+      <article class="faq__item js-buscable">
+        <button class="faq__pregunta" type="button" aria-expanded="false" aria-controls="faq-4">
+          ¿Qué propone exactamente con las “Provincias”?
+          <span class="faq__mas" aria-hidden="true"></span>
+        </button>
+        <div class="faq__respuesta" id="faq-4"><div>
+          <p>Propone impulsar las Provincias como entidad territorial con autonomía propia, en lugar de seguir apoyándose en esquemas como las Áreas Metropolitanas, frente a las cuales manifiesta reservas por los desequilibrios de poder que generan entre el municipio núcleo y los demás. La idea es que grupos de municipios con afinidades geográficas y económicas puedan asociarse, tomar decisiones conjuntas y acceder de forma equitativa a las rentas departamentales, reduciendo la dependencia del centro.</p>
+        </div></div>
+      </article>
+
+      <article class="faq__item js-buscable">
+        <button class="faq__pregunta" type="button" aria-expanded="false" aria-controls="faq-5">
+          ¿Cuáles fueron sus resultados más destacados como Alcalde de Envigado?
+          <span class="faq__mas" aria-hidden="true"></span>
+        </button>
+        <div class="faq__respuesta" id="faq-5"><div>
+          <p>Cerró su mandato con 186 obras entregadas, frente a las 110 que había pactado en su Plan de Desarrollo. Entre ellas están el Intercambio Vial La Ayurá (124.000 millones de pesos), el nuevo Palacio Municipal (93.000 millones, financiado en su mayoría con recursos del Área Metropolitana y la Nación) y la reconstrucción de la Plaza de Mercado.</p>
+          <p>En salud, durante la pandemia casi triplicó la capacidad de camas UCI, construyó una torre de hospitalización con 120 camas en el Hospital Manuel Uribe Ángel e instaló una planta propia de oxígeno medicinal. En 2021 fue elegido Mejor Alcalde del Área Metropolitana del Valle de Aburrá en la encuesta de El Colombiano.</p>
+        </div></div>
+      </article>
+
+      <article class="faq__item js-buscable">
+        <button class="faq__pregunta" type="button" aria-expanded="false" aria-controls="faq-6">
+          ¿Cuál es su formación académica?
+          <span class="faq__mas" aria-hidden="true"></span>
+        </button>
+        <div class="faq__respuesta" id="faq-6"><div>
+          <p>Es Ingeniero de Sistemas y Abogado, ambos títulos de la Institución Universitaria de Envigado. Tiene tres especializaciones: Gestión Pública Municipal en la Universidad EAFIT de Medellín, y Gobierno y Desarrollo Local y Alta Gerencia Pública, ambas en la Unión Iberoamericana de Municipalistas en Granada, España. Actualmente cursa una maestría en Dirección y Gestión Pública Local en esa misma institución.</p>
+        </div></div>
+      </article>
+
+      <article class="faq__item js-buscable">
+        <button class="faq__pregunta" type="button" aria-expanded="false" aria-controls="faq-7">
+          ¿Cómo solicito una entrevista o material de prensa?
+          <span class="faq__mas" aria-hidden="true"></span>
+        </button>
+        <div class="faq__respuesta" id="faq-7"><div>
+          <p>Escribiendo directamente a la línea de prensa de la campaña, disponible en la sección de contacto de esta página. También puede descargar aquí mismo, sin solicitarlo, la fotografía oficial en alta resolución, el logo y el perfil completo en PDF.</p>
+        </div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ KIT DE PRENSA ═══════════════ -->
+<section class="seccion seccion--menta" id="prensa">
+  <div class="contenedor">
+    <p class="rotulo">Kit de prensa</p>
+    <h2 class="titulo">Material listo<br>para publicar</h2>
+    <p class="entradilla">Todo el material está disponible sin registro ni solicitud previa. Descárguelo, cópielo y úselo directamente.</p>
+
+    <div class="kit">
+      <div class="kit__destacado">
+        <div>
+          <h3>Perfil completo en PDF</h3>
+          <p>Un documento con la fotografía, la biografía, la trayectoria detallada, la gestión y las propuestas. Se genera en el navegador, sin servidor.</p>
+          <div class="pdf-cargando" id="pdfCargando"><span class="girador" aria-hidden="true"></span> Generando el PDF…</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <button class="btn btn--principal" type="button" id="btnPdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Descargar PDF
+          </button>
+          <button class="btn btn--fantasma" type="button" id="btnPdfAlterno">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+            Guardar la página como PDF
+          </button>
+        </div>
+      </div>
+
+      <div class="kit__tarjeta">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          Imágenes oficiales
+        </h3>
+        <p>Fotografía de campaña en 2048 × 2048 px y logo en alta resolución con fondo transparente.</p>
+        <div class="kit__acciones">
+          <a class="btn btn--verde" href="./braulio.png" download="braulio-espinosa-marquez-foto-oficial.png">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Foto oficial
+          </a>
+          <a class="btn btn--borde" href="./logo.png" download="braulio-espinosa-logo.png">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            Logo
+          </a>
+        </div>
+      </div>
+
+      <div class="kit__tarjeta">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+          Biografía corta
+        </h3>
+        <p>Un párrafo de unas 100 palabras, verificado por la campaña, listo para pegar en una nota.</p>
+        <div class="kit__previa" id="bioCorta">
+          Braulio Alonso Espinosa Márquez es precandidato a la Gobernación de Antioquia. Ingeniero de Sistemas y Abogado de la Institución Universitaria de Envigado, con especializaciones en Gestión Pública Municipal (EAFIT), Gobierno y Desarrollo Local, y Alta Gerencia Pública (Unión Iberoamericana de Municipalistas, Granada). Fue Concejal de Envigado entre 2008 y 2015, Diputado de la Asamblea de Antioquia entre 2016 y 2019, y Alcalde de Envigado entre 2020 y 2023, cargo al que llegó con 45.239 votos y desde el cual entregó 186 obras. En 2021 fue elegido Mejor Alcalde del Área Metropolitana del Valle de Aburrá en la encuesta de El Colombiano.
+        </div>
+        <div class="kit__acciones">
+          <button class="btn-copiar" type="button" data-copiar="bio">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar biografía
+          </button>
+        </div>
+      </div>
+
+      <div class="kit__tarjeta">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v3m8-3v3"/></svg>
+          Ficha técnica
+        </h3>
+        <p>Los datos duros del candidato en texto plano, para verificar rápido antes de publicar.</p>
+        <div class="kit__previa">
+          <dl id="fichaTecnica">
+            <div><dt>Nombre completo</dt><dd>Braulio Alonso Espinosa Márquez</dd></div>
+            <div><dt>Aspiración</dt><dd>Gobernación de Antioquia</dd></div>
+            <div><dt>Nacimiento</dt><dd>14 de octubre de 1973</dd></div>
+            <div><dt>Residencia</dt><dd>Envigado, Antioquia</dd></div>
+            <div><dt>Profesión</dt><dd>Ingeniero de Sistemas y Abogado</dd></div>
+            <div><dt>Cargos anteriores</dt><dd>Concejal de Envigado (2008–2015), Diputado de Antioquia (2016–2019), Alcalde de Envigado (2020–2023)</dd></div>
+            <div><dt>Sede política</dt><dd>Carrera 45B # 34 sur - 57, Envigado</dd></div>
+            <div><dt>Prensa</dt><dd class="js-telefono">+57 321 222 2222</dd></div>
+            <div><dt>Correo</dt><dd>centrodeestudiospoliticos539@gmail.com</dd></div>
+            <div><dt>Redes</dt><dd>@braulioemarquez</dd></div>
+          </dl>
+        </div>
+        <div class="kit__acciones">
+          <button class="btn-copiar" type="button" data-copiar="ficha">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar ficha técnica
+          </button>
+        </div>
+      </div>
+
+      <div class="kit__tarjeta">
+        <h3>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-1L3 21l2.1-5a8.4 8.4 0 0 1-1-4 8.4 8.4 0 0 1 8.4-8.4h.5a8.4 8.4 0 0 1 8 8z"/></svg>
+          Agendar una entrevista
+        </h3>
+        <p>Escríbale directamente al equipo de comunicaciones. El mensaje se abre prellenado en WhatsApp.</p>
+        <div class="kit__acciones">
+          <a class="btn btn--verde" id="btnEntrevista" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-1L3 21l2.1-5a8.4 8.4 0 0 1-1-4 8.4 8.4 0 0 1 8.4-8.4h.5a8.4 8.4 0 0 1 8 8z"/></svg>
+            Solicitar entrevista
+          </a>
+          <a class="btn btn--borde" href="#preguntas">Ver preguntas frecuentes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACTO ═══════════════ -->
+<section class="seccion" id="contacto">
+  <div class="contenedor">
+    <p class="rotulo">Contacto</p>
+    <h2 class="titulo">Hablemos</h2>
+    <p class="entradilla">Canales oficiales de la campaña para medios de comunicación y ciudadanía.</p>
+
+    <div class="contacto">
+      <div class="contacto__caja">
+        <h3>Prensa y comunicaciones</h3>
+        <dl>
+          <div class="dato">
+            <span class="dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <div><dt>Línea de prensa</dt><dd><a class="js-telefono-enlace" href="#"><span class="js-telefono">+57 321 222 2222</span></a></dd></div>
+          </div>
+          <div class="dato">
+            <span class="dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+            <div><dt>Correo electrónico</dt><dd><a href="mailto:centrodeestudiospoliticos539@gmail.com">centrodeestudiospoliticos539@gmail.com</a></dd></div>
+          </div>
+          <div class="dato">
+            <span class="dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><dt>Sede política</dt><dd>Carrera 45B # 34 sur - 57<br>Envigado, Antioquia</dd></div>
+          </div>
+          <div class="dato">
+            <span class="dato__icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <div><dt>Teléfono de la sede</dt><dd><a href="tel:+573332755540">333 275 55 40</a></dd></div>
+          </div>
+        </dl>
+      </div>
+
+      <div class="contacto__caja">
+        <h3>Redes sociales</h3>
+        <div class="redes">
+          <a class="red" href="https://www.facebook.com/search/top?q=braulio%20espinosa%20m%C3%A1rquez" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+            <span>Braulio Espinosa Márquez</span>
+          </a>
+          <a class="red" href="https://www.instagram.com/braulioemarquez/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg>
+            <span>@braulioemarquez</span>
+          </a>
+          <a class="red" href="https://x.com/braulioemarquez" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2h3.3l-7.2 8.2L22.8 22h-6.6l-5.2-6.8L5.1 22H1.8l7.7-8.8L1.2 2h6.8l4.7 6.2zm-1.2 18h1.8L7.1 3.9H5.2z"/></svg>
+            <span>@braulioemarquez</span>
+          </a>
+          <a class="red" href="https://www.tiktok.com/@braulioemarquez" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.8a4.8 4.8 0 0 1-1-2.8h-3.3v13.1a2.9 2.9 0 1 1-2-2.8V10a6.1 6.1 0 1 0 5.3 6v-6.6a8 8 0 0 0 4.7 1.5V7.6a4.8 4.8 0 0 1-3.7-1.8z"/></svg>
+            <span>@braulioemarquez</span>
+          </a>
+        </div>
+        <p style="margin:18px 0 0;font-size:.88rem;color:var(--gris)">
+          Sitio principal de campaña: <a href="https://www.braulioespinosa.com" target="_blank" rel="noopener" style="color:var(--verde-bandera);font-weight:600">braulioespinosa.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="compartir">
+      <p>Comparta este perfil
+        <small>Enlace único con toda la información oficial del candidato.</small>
+      </p>
+      <div class="compartir__botones">
+        <a class="btn btn--verde" id="btnWhatsapp" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-1L3 21l2.1-5a8.4 8.4 0 0 1-1-4 8.4 8.4 0 0 1 8.4-8.4h.5a8.4 8.4 0 0 1 8 8z"/></svg>
+          WhatsApp
+        </a>
+        <button class="btn btn--borde" type="button" id="btnCopiarEnlace">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+          Copiar enlace
+        </button>
+        <button class="btn btn--borde" type="button" id="btnImprimir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          Imprimir
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mensaje de búsqueda sin resultados -->
+<div class="contenedor">
+  <div class="sin-resultados" id="sinResultados" data-visible="false">
+    <h3>Sin coincidencias</h3>
+    <p>No encontramos nada para <strong id="terminoBuscado"></strong> en el perfil. Pruebe con otro término o use uno de estos:</p>
+    <div class="sugerencias">
+      <button type="button" data-sugerencia="alcalde">alcalde</button>
+      <button type="button" data-sugerencia="educación">educación</button>
+      <button type="button" data-sugerencia="Hidroituango">Hidroituango</button>
+      <button type="button" data-sugerencia="provincias">provincias</button>
+      <button type="button" data-sugerencia="obras">obras</button>
+      <button type="button" data-sugerencia="Metroplús">Metroplús</button>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="pie">
+  <div class="contenedor">
+
+    <div class="pie__grid">
+      <div>
+        <img src="./logo.png" alt="Braulio Espinosa Márquez" width="150" height="93" loading="lazy">
+        <p style="margin:0;max-width:38ch">Perfil oficial y kit de prensa de Braulio Espinosa Márquez, precandidato a la Gobernación de Antioquia.</p>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#biografia">Biografía</a></li>
+          <li><a href="#trayectoria">Trayectoria</a></li>
+          <li><a href="#gestion">Gestión</a></li>
+          <li><a href="#propuestas">Propuestas</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para medios</h4>
+        <ul>
+          <li><a href="#prensa">Kit de prensa</a></li>
+          <li><a href="./braulio.png" download>Foto en alta resolución</a></li>
+          <li><a href="./logo.png" download>Logo de campaña</a></li>
+          <li><a href="#contacto">Línea de prensa</a></li>
+          <li><a href="https://www.braulioespinosa.com" target="_blank" rel="noopener">Sitio principal</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie__base">
+      <span>© <span id="anio">2026</span> Campaña Braulio Espinosa Márquez. Todos los derechos reservados.</span>
+      <span>Por Antioquia, sin pausa.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="arriba" id="btnArriba" type="button" aria-label="Volver al inicio de la página" data-visible="false">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite" data-visible="false"></div>
+
+<!-- Datos estructurados para buscadores -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Braulio Alonso Espinosa Márquez",
+  "alternateName":"Braulio Espinosa Márquez",
+  "birthDate":"1973-10-14",
+  "jobTitle":"Precandidato a la Gobernación de Antioquia",
+  "description":"Dirigente político antioqueño. Ingeniero de Sistemas y Abogado. Concejal de Envigado (2008–2015), Diputado de Antioquia (2016–2019) y Alcalde de Envigado (2020–2023).",
+  "image":"https://prensa.braulioespinosa.com/og-image.jpg",
+  "url":"https://prensa.braulioespinosa.com/",
+  "nationality":{"@type":"Country","name":"Colombia"},
+  "homeLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Envigado","addressRegion":"Antioquia","addressCountry":"CO"}},
+  "email":"centrodeestudiospoliticos539@gmail.com",
+  "alumniOf":[
+    {"@type":"CollegeOrUniversity","name":"Institución Universitaria de Envigado"},
+    {"@type":"CollegeOrUniversity","name":"Universidad EAFIT"},
+    {"@type":"CollegeOrUniversity","name":"Unión Iberoamericana de Municipalistas"}
+  ],
+  "hasOccupation":[
+    {"@type":"Role","roleName":"Alcalde de Envigado","startDate":"2020","endDate":"2023"},
+    {"@type":"Role","roleName":"Diputado de la Asamblea Departamental de Antioquia","startDate":"2016","endDate":"2019"},
+    {"@type":"Role","roleName":"Concejal de Envigado","startDate":"2008","endDate":"2015"}
+  ],
+  "sameAs":[
+    "https://www.instagram.com/braulioemarquez/",
+    "https://x.com/braulioemarquez",
+    "https://www.tiktok.com/@braulioemarquez",
+    "https://www.braulioespinosa.com"
+  ]
+}
+</script>
+
+<script>
+/* ══════════════════════════════════════════════════════════
+   CONFIGURACIÓN — cambiar aquí y se actualiza en toda la página
+   ══════════════════════════════════════════════════════════ */
+const TELEFONO_PRENSA = '+573212222222';   // ← número de la comunicadora (temporal)
+const NOMBRE = 'Braulio Espinosa Márquez';
+
+(function(){
+'use strict';
+
+const $  = (s,c=document)=>c.querySelector(s);
+const $$ = (s,c=document)=>Array.from(c.querySelectorAll(s));
+
+/* ── Teléfono en toda la página ────────────────────────── */
+const telBonito = TELEFONO_PRENSA.replace(/^\+57(\d{3})(\d{3})(\d{4})$/,'+57 $1 $2 $3');
+$$('.js-telefono').forEach(el=>el.textContent = telBonito);
+$$('.js-telefono-enlace').forEach(a=>a.href = 'https://wa.me/'+TELEFONO_PRENSA.replace(/\D/g,''));
+$('#anio').textContent = new Date().getFullYear();
+
+/* ── Mensajes flotantes ────────────────────────────────── */
+let avisoTimer;
+function avisar(texto){
+  const a = $('#aviso');
+  a.textContent = texto;
+  a.dataset.visible = 'true';
+  clearTimeout(avisoTimer);
+  avisoTimer = setTimeout(()=>{a.dataset.visible='false';},2600);
+}
+
+/* ── Menú móvil ────────────────────────────────────────── */
+const menu = $('#menuMovil'), btnMenu = $('#btnMenu');
+function alternarMenu(abrir){
+  const nuevo = abrir ?? menu.dataset.abierto !== 'true';
+  menu.dataset.abierto = nuevo;
+  btnMenu.setAttribute('aria-expanded', nuevo);
+  btnMenu.setAttribute('aria-label', nuevo ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+  document.body.style.overflow = nuevo ? 'hidden' : '';
+}
+btnMenu.addEventListener('click',()=>alternarMenu());
+$$('#menuMovil a').forEach(a=>a.addEventListener('click',()=>alternarMenu(false)));
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape' && menu.dataset.abierto==='true') { alternarMenu(false); btnMenu.focus(); }
+});
+
+/* ── Tamaño de texto ───────────────────────────────────── */
+const escalas = [1, 1.12, 1.24];
+let iEscala = 0;
+$('#btnTexto').addEventListener('click',()=>{
+  iEscala = (iEscala+1) % escalas.length;
+  document.documentElement.style.setProperty('--escala', escalas[iEscala]);
+  avisar(iEscala===0 ? 'Tamaño de texto normal' : 'Texto ampliado '+Math.round(escalas[iEscala]*100)+'%');
+});
+
+/* ── Sección activa en la navegación ───────────────────── */
+const secciones = $$('main section[id]');
+const enlacesNav = $$('.nav__enlaces a');
+if('IntersectionObserver' in window){
+  const obs = new IntersectionObserver(entradas=>{
+    entradas.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const id = e.target.id;
+      enlacesNav.forEach(a=>a.setAttribute('aria-current', a.getAttribute('href')==='#'+id ? 'true':'false'));
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secciones.forEach(s=>obs.observe(s));
+}
+
+/* ── Acordeones: se registran en reconectarAcordeones(), más abajo ── */
+
+/* ── Contadores animados ───────────────────────────────── */
+function animarContador(el){
+  const hasta = parseInt(el.dataset.hasta,10);
+  const sufijo = el.dataset.sufijo || '';
+  const separar = el.dataset.separador === '1';
+  const dur = 1400, ini = performance.now();
+  const fmt = n => (separar ? n.toLocaleString('es-CO') : String(n)) + sufijo;
+  function paso(ahora){
+    const t = Math.min((ahora-ini)/dur,1);
+    const e = 1 - Math.pow(1-t,3);
+    el.textContent = fmt(Math.round(hasta*e));
+    if(t<1) requestAnimationFrame(paso);
+  }
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent = fmt(hasta); return; }
+  requestAnimationFrame(paso);
+}
+if('IntersectionObserver' in window){
+  const obsC = new IntersectionObserver((es,o)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ animarContador(e.target); o.unobserve(e.target); } });
+  },{threshold:.5});
+  $$('.js-contar').forEach(el=>obsC.observe(el));
+} else {
+  $$('.js-contar').forEach(el=>{ el.textContent = el.dataset.hasta; });
+}
+
+/* ── Animación de entrada ──────────────────────────────── */
+const revelables = $$('.hito, .obra, .bloque, .pilar, .bandera, .premio, .frase, .kit__tarjeta, .kit__destacado, .contacto__caja, .faq__item, .ficha');
+revelables.forEach(el=>el.classList.add('revelar'));
+if('IntersectionObserver' in window){
+  const obsR = new IntersectionObserver((es,o)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.dataset.visible='true'; o.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -60px 0px'});
+  revelables.forEach(el=>obsR.observe(el));
+} else {
+  revelables.forEach(el=>el.dataset.visible='true');
+}
+
+/* ══════════════════════════════════════════════════════════
+   BUSCADOR — filtro instantáneo sobre toda la página
+   ══════════════════════════════════════════════════════════ */
+const unidades = $$('.js-buscable');
+const grupos   = $$('[data-grupo]');
+const barra    = $('#barraResultados');
+const textoRes = $('#textoResultados');
+const sinRes   = $('#sinResultados');
+const inputs   = $$('.js-buscar');
+
+// Guardar el HTML original de cada unidad para poder restaurarlo
+unidades.forEach(u=>{ u.dataset.htmlOriginal = u.innerHTML; });
+
+const normalizar = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let coincidencias = [], indiceActual = -1;
+
+function resaltar(nodo, termino){
+  const paseo = document.createTreeWalker(nodo, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => (n.parentElement.closest('script,style,button.btn-copiar'))
+      ? NodeFilter.FILTER_REJECT
+      : (n.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT)
+  });
+  const textos = [];
+  let n; while(n = paseo.nextNode()) textos.push(n);
+
+  textos.forEach(t=>{
+    const plano = normalizar(t.nodeValue);
+    let desde = 0, pos, frag = null;
+    while((pos = plano.indexOf(termino, desde)) !== -1){
+      frag = frag || document.createDocumentFragment();
+      frag.appendChild(document.createTextNode(t.nodeValue.slice(desde,pos)));
+      const m = document.createElement('mark');
+      m.textContent = t.nodeValue.slice(pos, pos+termino.length);
+      frag.appendChild(m);
+      desde = pos + termino.length;
+    }
+    if(frag){
+      frag.appendChild(document.createTextNode(t.nodeValue.slice(desde)));
+      t.parentNode.replaceChild(frag, t);
+    }
+  });
+}
+
+function limpiarBusqueda(){
+  unidades.forEach(u=>{
+    u.innerHTML = u.dataset.htmlOriginal;
+    u.classList.remove('oculto-busqueda','resaltado-foco');
+  });
+  grupos.forEach(g=>g.classList.remove('oculto-busqueda'));
+  $$('.seccion').forEach(s=>s.classList.remove('oculto-busqueda'));
+  barra.dataset.visible = 'false';
+  sinRes.dataset.visible = 'false';
+  coincidencias = []; indiceActual = -1;
+  // Reconectar los acordeones tras restaurar el HTML
+  reconectarAcordeones();
+  reconectarCopiar();
+}
+
+function buscar(valor){
+  const termino = normalizar(valor.trim());
+  inputs.forEach(i=>{ if(i.value!==valor) i.value = valor; i.closest('.buscador').classList.toggle('tiene-texto', !!valor); });
+
+  if(termino.length < 2){ limpiarBusqueda(); return; }
+
+  // Restaurar antes de volver a resaltar
+  unidades.forEach(u=>{ u.innerHTML = u.dataset.htmlOriginal; u.classList.remove('resaltado-foco'); });
+  coincidencias = [];
+
+  unidades.forEach(u=>{
+    const hay = normalizar(u.textContent).includes(termino);
+    u.classList.toggle('oculto-busqueda', !hay);
+    if(hay){ resaltar(u, termino); coincidencias.push(u); }
+  });
+
+  // Ocultar grupos y secciones que quedaron vacíos
+  grupos.forEach(g=>{
+    const vivos = $$('.js-buscable:not(.oculto-busqueda)', g).length;
+    g.classList.toggle('oculto-busqueda', vivos===0);
+  });
+  $$('.seccion').forEach(s=>{
+    const tiene = s.querySelector('[data-grupo]');
+    if(!tiene) return;
+    const vivos = $$('.js-buscable:not(.oculto-busqueda)', s).length;
+    s.classList.toggle('oculto-busqueda', vivos===0);
+  });
+
+  reconectarAcordeones();
+  reconectarCopiar();
+
+  // Abrir automáticamente los acordeones con coincidencias
+  coincidencias.forEach(u=>{
+    const cab = u.querySelector('.hito__cabeza, .faq__pregunta');
+    if(cab) cab.setAttribute('aria-expanded','true');
+  });
+
+  const n = coincidencias.length;
+  barra.dataset.visible = 'true';
+  sinRes.dataset.visible = n===0 ? 'true' : 'false';
+  $('#terminoBuscado').textContent = '“'+valor.trim()+'”';
+  textoRes.innerHTML = n===0
+    ? 'Sin coincidencias para <strong>'+valor.trim().replace(/[<>&]/g,'')+'</strong>'
+    : '<strong>'+n+'</strong> '+(n===1?'coincidencia':'coincidencias')+' para “'+valor.trim().replace(/[<>&]/g,'')+'”';
+
+  if(n>0){ indiceActual = -1; irA(1); }
+}
+
+function irA(direccion){
+  if(!coincidencias.length) return;
+  coincidencias.forEach(c=>c.classList.remove('resaltado-foco'));
+  indiceActual = (indiceActual + direccion + coincidencias.length) % coincidencias.length;
+  const destino = coincidencias[indiceActual];
+  destino.classList.add('resaltado-foco');
+  const y = destino.getBoundingClientRect().top + window.scrollY - 150;
+  window.scrollTo({top:y, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto':'smooth'});
+}
+
+let debounce;
+inputs.forEach(i=>{
+  i.addEventListener('input',e=>{
+    clearTimeout(debounce);
+    const v = e.target.value;
+    debounce = setTimeout(()=>buscar(v), 160);
+  });
+  i.addEventListener('keydown',e=>{
+    if(e.key==='Enter'){ e.preventDefault(); irA(e.shiftKey?-1:1); }
+    if(e.key==='Escape'){ e.target.value=''; limpiarBusqueda(); inputs.forEach(x=>x.closest('.buscador').classList.remove('tiene-texto')); }
+  });
+});
+$$('.js-limpiar').forEach(b=>b.addEventListener('click',()=>{
+  inputs.forEach(i=>i.value='');
+  limpiarBusqueda();
+  inputs.forEach(i=>i.closest('.buscador').classList.remove('tiene-texto'));
+  inputs[0].focus();
+}));
+$('#btnSiguiente').addEventListener('click',()=>irA(1));
+$('#btnAnterior').addEventListener('click',()=>irA(-1));
+$('#btnCerrarBusqueda').addEventListener('click',()=>{
+  inputs.forEach(i=>{ i.value=''; i.closest('.buscador').classList.remove('tiene-texto'); });
+  limpiarBusqueda();
+});
+$$('[data-sugerencia]').forEach(b=>b.addEventListener('click',()=>buscar(b.dataset.sugerencia)));
+
+// Atajo Ctrl/Cmd + K
+document.addEventListener('keydown',e=>{
+  if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='k'){
+    e.preventDefault();
+    const visible = inputs.find(i=>i.offsetParent!==null) || inputs[0];
+    if(visible.offsetParent===null) alternarMenu(true);
+    setTimeout(()=>visible.focus(),50);
+  }
+});
+
+function reconectarAcordeones(){
+  $$('.hito__cabeza, .faq__pregunta').forEach(btn=>{
+    if(btn.dataset.conectado) return;
+    btn.dataset.conectado = '1';
+    btn.addEventListener('click',()=>{
+      btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded')!=='true');
+    });
+  });
+}
+reconectarAcordeones();
+
+/* ── Copiar ────────────────────────────────────────────── */
+function textoFicha(){
+  return [
+    'FICHA TÉCNICA — BRAULIO ALONSO ESPINOSA MÁRQUEZ','',
+    'Nombre completo: Braulio Alonso Espinosa Márquez',
+    'Aspiración: Gobernación de Antioquia',
+    'Fecha de nacimiento: 14 de octubre de 1973',
+    'Residencia: Envigado, Antioquia',
+    'Profesión: Ingeniero de Sistemas y Abogado',
+    'Cargos anteriores: Concejal de Envigado (2008–2015), Diputado de Antioquia (2016–2019), Alcalde de Envigado (2020–2023)',
+    'Sede política: Carrera 45B # 34 sur - 57, Envigado',
+    'Prensa: '+telBonito,
+    'Correo: centrodeestudiospoliticos539@gmail.com',
+    'Redes: @braulioemarquez (Instagram, X, TikTok)'
+  ].join('\n');
+}
+
+async function copiar(texto, boton, etiqueta){
+  try{
+    if(navigator.clipboard && window.isSecureContext){
+      await navigator.clipboard.writeText(texto);
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = texto; ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+    }
+    if(boton){
+      const orig = boton.innerHTML;
+      boton.dataset.copiado = 'true';
+      boton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20 6-11 11-5-5"/></svg> Copiado';
+      setTimeout(()=>{ boton.innerHTML = orig; boton.dataset.copiado='false'; },1900);
+    }
+    avisar(etiqueta+' copiada al portapapeles');
+  }catch(err){
+    avisar('No se pudo copiar. Seleccione el texto manualmente.');
+  }
+}
+
+function reconectarCopiar(){
+  $$('[data-copiar]').forEach(b=>{
+    if(b.dataset.conectado) return;
+    b.dataset.conectado = '1';
+    b.addEventListener('click',()=>{
+      const tipo = b.dataset.copiar;
+      if(tipo==='ficha') copiar(textoFicha(), b, 'Ficha técnica');
+      else if(tipo==='bio') copiar($('#bioCorta').textContent.trim().replace(/\s+/g,' '), b, 'Biografía');
+      else if(tipo==='frase'){
+        const cita = b.closest('.frase');
+        copiar('“'+cita.querySelector('blockquote').textContent.trim()+'” — '+NOMBRE+', precandidato a la Gobernación de Antioquia.', b, 'Frase');
+      }
+    });
+  });
+}
+reconectarCopiar();
+
+/* ── Compartir ─────────────────────────────────────────── */
+const urlPagina = location.href.split('#')[0];
+const textoCompartir = NOMBRE+' — Precandidato a la Gobernación de Antioquia. Perfil oficial y kit de prensa: ';
+$('#btnWhatsapp').href = 'https://wa.me/?text='+encodeURIComponent(textoCompartir+urlPagina);
+$('#btnEntrevista').href = 'https://wa.me/'+TELEFONO_PRENSA.replace(/\D/g,'')
+  +'?text='+encodeURIComponent('Hola, soy periodista y quisiera solicitar una entrevista con '+NOMBRE+'. Mi medio es: ');
+$('#btnCopiarEnlace').addEventListener('click',e=>{
+  if(navigator.share && /Mobi|Android|iPhone/i.test(navigator.userAgent)){
+    navigator.share({title:NOMBRE, text:textoCompartir, url:urlPagina}).catch(()=>copiar(urlPagina,e.currentTarget,'Dirección'));
+  } else {
+    copiar(urlPagina, e.currentTarget, 'Dirección');
+  }
+});
+$('#btnImprimir').addEventListener('click',()=>window.print());
+
+/* ── Volver arriba ─────────────────────────────────────── */
+const btnArriba = $('#btnArriba');
+btnArriba.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+let ticking=false;
+window.addEventListener('scroll',()=>{
+  if(ticking) return; ticking=true;
+  requestAnimationFrame(()=>{ btnArriba.dataset.visible = window.scrollY>700; ticking=false; });
+},{passive:true});
+
+/* ══════════════════════════════════════════════════════════
+   PDF DEL KIT DE PRENSA (jsPDF, carga bajo demanda)
+   ══════════════════════════════════════════════════════════ */
+const btnPdf = $('#btnPdf'), cargando = $('#pdfCargando');
+
+/* Se intentan varias fuentes en orden. La primera es una copia local
+   opcional: si descarga jspdf.umd.min.js y lo pone junto a index.html,
+   el PDF funciona sin depender de ningún CDN. */
+const FUENTES_JSPDF = [
+  './jspdf.umd.min.js',
+  'https://unpkg.com/jspdf@3.0.3/dist/jspdf.umd.min.js',
+  'https://cdn.jsdelivr.net/npm/jspdf@3.0.3/dist/jspdf.umd.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.0.0/jspdf.umd.min.js'
+];
+
+function obtenerJsPDF(){
+  return (window.jspdf && window.jspdf.jsPDF) || window.jsPDF || null;
+}
+
+function cargarUna(src){
+  return new Promise((ok,mal)=>{
+    const s = document.createElement('script');
+    s.src = src; s.async = true;
+    s.onload = ()=> obtenerJsPDF() ? ok(src) : mal(new Error('cargó pero no expuso jsPDF: '+src));
+    s.onerror = ()=> mal(new Error('no cargó: '+src));
+    document.head.appendChild(s);
+    setTimeout(()=>mal(new Error('tiempo agotado: '+src)), 12000);
+  });
+}
+
+async function cargarJsPDF(){
+  if(obtenerJsPDF()) return;
+  for(const src of FUENTES_JSPDF){
+    try{ await cargarUna(src); if(obtenerJsPDF()) return; }
+    catch(e){ console.warn(e.message); }
+  }
+  throw new Error('Ninguna fuente de jsPDF respondió');
+}
+
+function imagenADatos(ruta){
+  return new Promise(res=>{
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = ()=>{
+      try{
+        const c = document.createElement('canvas');
+        const max = 700;
+        const esc = Math.min(1, max/Math.max(img.width,img.height));
+        c.width = img.width*esc; c.height = img.height*esc;
+        c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+        res(c.toDataURL('image/jpeg',0.86));
+      }catch(e){ res(null); }
+    };
+    img.onerror = ()=>res(null);
+    img.src = ruta;
+  });
+}
+
+btnPdf.addEventListener('click', async ()=>{
+  btnPdf.disabled = true;
+  cargando.dataset.visible = 'true';
+  try{
+    await cargarJsPDF();
+    const jsPDF = obtenerJsPDF();
+    const doc = new jsPDF({unit:'mm', format:'a4'});
+    const A = 210, ALTO = 297, M = 16;
+    const VERDE = [23,58,31], BANDERA=[0,92,30], MENTA=[177,216,185], GRIS=[87,104,91], AMAR=[245,217,12];
+    let y = 0;
+
+    const foto = await imagenADatos('./braulio-web.jpg');
+    const logo = await imagenADatos('./logo.png');
+
+    function pie(n){
+      doc.setDrawColor(210); doc.setLineWidth(.2);
+      doc.line(M, ALTO-14, A-M, ALTO-14);
+      doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(...GRIS);
+      doc.text('Braulio Espinosa Márquez · Precandidato a la Gobernación de Antioquia', M, ALTO-9.5);
+      doc.text('Página '+n, A-M, ALTO-9.5, {align:'right'});
+    }
+    function tituloSeccion(t){
+      if(y > ALTO-52){ pie(doc.getNumberOfPages()); doc.addPage(); y = 22; }
+      doc.setFillColor(...AMAR); doc.rect(M, y-3.4, 9, 2.4, 'F');
+      y += 5;
+      doc.setFont('helvetica','bold'); doc.setFontSize(14); doc.setTextColor(...VERDE);
+      doc.text(t, M, y); y += 8;
+    }
+    function parrafo(t, tam=9.6, color=[35,45,38]){
+      doc.setFont('helvetica','normal'); doc.setFontSize(tam); doc.setTextColor(...color);
+      const lineas = doc.splitTextToSize(t, A-M*2);
+      lineas.forEach(l=>{
+        if(y > ALTO-20){ pie(doc.getNumberOfPages()); doc.addPage(); y = 22; }
+        doc.text(l, M, y); y += tam*0.52;
+      });
+      y += 3.4;
+    }
+    function vinieta(t){
+      doc.setFont('helvetica','normal'); doc.setFontSize(9.2); doc.setTextColor(35,45,38);
+      const lineas = doc.splitTextToSize(t, A-M*2-6);
+      lineas.forEach((l,i)=>{
+        if(y > ALTO-20){ pie(doc.getNumberOfPages()); doc.addPage(); y = 22; }
+        if(i===0){ doc.setFillColor(...MENTA); doc.circle(M+1.6, y-1.3, 1.1, 'F'); }
+        doc.text(l, M+6, y); y += 4.7;
+      });
+      y += 1.4;
+    }
+
+    /* ── Portada ── */
+    doc.setFillColor(...VERDE); doc.rect(0,0,A,92,'F');
+    if(logo){
+      doc.setFillColor(255,255,255); doc.roundedRect(M, 14, 52, 33, 2.5, 2.5, 'F');
+      doc.addImage(logo,'JPEG', M+3.5, 17.5, 45, 26);
+    }
+    if(foto) doc.addImage(foto,'JPEG', A-M-52, 14, 52, 52, undefined, 'FAST');
+    doc.setFont('helvetica','bold'); doc.setFontSize(23); doc.setTextColor(255,255,255);
+    doc.text('Braulio Espinosa', M, 62);
+    doc.setTextColor(...MENTA); doc.text('Márquez', M, 72);
+    doc.setFillColor(...AMAR); doc.roundedRect(M, 78, 96, 8, 4, 4, 'F');
+    doc.setFont('helvetica','bold'); doc.setFontSize(8.6); doc.setTextColor(...VERDE);
+    doc.text('PRECANDIDATO A LA GOBERNACIÓN DE ANTIOQUIA', M+5, 83.4);
+
+    y = 106;
+    doc.setFont('helvetica','bold'); doc.setFontSize(13); doc.setTextColor(...VERDE);
+    doc.text('“Gobernaremos desde el territorio, no desde el escritorio.”', M, y);
+    y += 12;
+
+    tituloSeccion('Perfil');
+    parrafo('Braulio Alonso Espinosa Márquez es un dirigente político antioqueño con quince años de experiencia continua en cargos de elección popular. Es Ingeniero de Sistemas y Abogado de la Institución Universitaria de Envigado, con especializaciones en Gestión Pública Municipal (Universidad EAFIT) y en Gobierno y Desarrollo Local y Alta Gerencia Pública (Unión Iberoamericana de Municipalistas, Granada, España), donde cursa una maestría en Dirección y Gestión Pública Local.');
+    parrafo('Fue Concejal de Envigado entre 2008 y 2015, donde presidió el Concejo y la Comisión de Presupuesto; Diputado de la Asamblea Departamental de Antioquia entre 2016 y 2019; y Alcalde de Envigado entre 2020 y 2023, cargo al que llegó con 45.239 votos encabezando la coalición Aquí Sumamos Todos. Cerró su mandato con 186 obras entregadas. Es padre de Sofía y Sebastián.');
+
+    tituloSeccion('Cifras clave');
+    vinieta('45.239 votos en la elección a la Alcaldía de Envigado (2019), cerca del 42 % de la votación.');
+    vinieta('186 obras entregadas entre 2020 y 2023, frente a 110 pactadas en el Plan de Desarrollo.');
+    vinieta('15 años continuos en cargos de elección popular.');
+    vinieta('Mejor Alcalde del Área Metropolitana del Valle de Aburrá, encuesta de El Colombiano 2021.');
+
+    /* ── Trayectoria ── */
+    pie(doc.getNumberOfPages()); doc.addPage(); y = 24;
+    tituloSeccion('Trayectoria');
+
+    doc.setFont('helvetica','bold'); doc.setFontSize(10.6); doc.setTextColor(...BANDERA);
+    doc.text('Concejal de Envigado · 2008–2015', M, y); y += 6;
+    vinieta('Presidente del Concejo Municipal de Envigado.');
+    vinieta('Presidente de la Comisión de Presupuesto y de la Comisión Accidental de Educación.');
+    vinieta('Convenios con la Institución Universitaria de Envigado, el Tecnológico de Artes Débora Arango y el CEFIT.');
+    vinieta('Distinción “Dirigente revelación” del Círculo de Periodistas de Envigado.');
+    y += 3;
+
+    doc.setFont('helvetica','bold'); doc.setFontSize(10.6); doc.setTextColor(...BANDERA);
+    doc.text('Diputado de Antioquia · 2016–2019', M, y); y += 6;
+    vinieta('Ampliación de la cobertura de internet a zonas alejadas del departamento.');
+    vinieta('Inclusión de la pavimentación de vías terciarias en el Plan de Desarrollo Departamental.');
+    vinieta('Defensa de la integridad territorial de Antioquia en la controversia de Belén de Bajirá.');
+    vinieta('Lideró la Comisión Accidental de la Asamblea en la emergencia de Hidroituango.');
+    vinieta('Defensa en primer debate del Proyecto de Ordenanza N.º 17, sobre la Estampilla Politécnico Colombiano Jaime Isaza Cadavid.');
+    y += 3;
+
+    doc.setFont('helvetica','bold'); doc.setFontSize(10.6); doc.setTextColor(...BANDERA);
+    doc.text('Alcalde de Envigado · 2020–2023', M, y); y += 6;
+    vinieta('Elegido con 45.239 votos por la coalición Aquí Sumamos Todos (Liberal, Conservador y Cambio Radical).');
+    vinieta('186 obras entregadas, manejando además la emergencia sanitaria por COVID-19.');
+    vinieta('Intercambio Vial La Ayurá: 124.000 millones de pesos.');
+    vinieta('Nuevo Palacio Municipal: 93.000 millones, con 74.000 cofinanciados por el Área Metropolitana.');
+    vinieta('Reconstrucción de la Plaza de Mercado: 17.517 millones de pesos.');
+    vinieta('Terminación unilateral del contrato del Tramo 2B de Metroplús ante incumplimientos del contratista.');
+    vinieta('Triplicó casi la capacidad de camas UCI y construyó una torre de 120 camas en el Hospital Manuel Uribe Ángel.');
+    vinieta('Más de 20 obras barriales ejecutadas con las Juntas de Acción Comunal.');
+
+    /* ── Propuestas ── */
+    pie(doc.getNumberOfPages()); doc.addPage(); y = 24;
+    tituloSeccion('Propuestas para Antioquia');
+    doc.setFont('helvetica','bold'); doc.setFontSize(10.6); doc.setTextColor(...BANDERA);
+    doc.text('Bandera 1 · Ordenamiento territorial con rigor', M, y); y += 6;
+    parrafo('Sostiene que Colombia es un “estado mal planificado” y que la expansión urbana se dio sin herramientas jurídicas serias, produciendo una fragmentación indebida del uso del suelo. Su tesis es que las ciudades no pueden crecer de manera indefinida. El foco departamental está en el Oriente Antioqueño, la subregión de crecimiento demográfico más acelerado, que requiere un plan integral de infraestructura vial primaria.');
+    doc.setFont('helvetica','bold'); doc.setFontSize(10.6); doc.setTextColor(...BANDERA);
+    doc.text('Bandera 2 · Provincias y descentralización', M, y); y += 6;
+    parrafo('Manifiesta reservas frente a las Áreas Metropolitanas por los desequilibrios de poder que generan y propone las Provincias como entidad territorial con autonomía, de modo que las subregiones participen equitativamente de las rentas departamentales y ganen capacidad de decisión frente al centralismo de Medellín.');
+
+    tituloSeccion('Seis frentes de trabajo');
+    vinieta('Educación: financiación estable para la educación superior pública, alimentación escolar, educación inicial y jornada única.');
+    vinieta('Salud: ampliar capacidad instalada de forma anticipada, replicando el modelo aplicado en el Hospital Manuel Uribe Ángel.');
+    vinieta('Agricultura y campo: vías terciarias y conectividad rural como condición para la comercialización campesina.');
+    vinieta('Desarrollo e infraestructura: cierre financiero multifuente a escala departamental.');
+    vinieta('Seguridad: presencia institucional articulada entre departamento, municipios y Nación.');
+    vinieta('Deporte: escenarios deportivos en zonas rurales y barrios, gestionados con el departamento y la Nación.');
+
+    tituloSeccion('Reconocimientos');
+    vinieta('Galardón Orgullo de Colombia — Fundación Reconciliación Futuro de Colombia, Congreso de la República.');
+    vinieta('Mejor Alcalde del Área Metropolitana — Encuesta de El Colombiano, 2021.');
+    vinieta('Gobernante más comprometido con la niñez — Corporación Juego y Niñez, tres años consecutivos.');
+    vinieta('Buenas Prácticas en el PAE, Mejor gestión de la educación inicial y Estrategias pedagógicas para la Jornada Única — Ministerio de Educación Nacional, 2021.');
+
+    tituloSeccion('Contacto de prensa');
+    vinieta('Línea de prensa: '+telBonito);
+    vinieta('Correo: centrodeestudiospoliticos539@gmail.com');
+    vinieta('Sede política: Carrera 45B # 34 sur - 57, Envigado, Antioquia.');
+    vinieta('Redes sociales: @braulioemarquez en Instagram, X y TikTok.');
+    vinieta('Sitio principal: www.braulioespinosa.com');
+
+    pie(doc.getNumberOfPages());
+    doc.save('Perfil-Braulio-Espinosa-Marquez.pdf');
+    avisar('PDF descargado');
+  }catch(err){
+    console.error(err);
+    avisar('No se pudo generar el PDF. Abriendo la opción de imprimir…');
+    setTimeout(()=>$('#btnPdfAlterno').click(), 1400);
+  }finally{
+    btnPdf.disabled = false;
+    cargando.dataset.visible = 'false';
+  }
+});
+
+$('#btnPdfAlterno').addEventListener('click',()=>{
+  // Abre todos los acordeones para que el PDF impreso quede completo
+  $$('.hito__cabeza, .faq__pregunta').forEach(b=>b.setAttribute('aria-expanded','true'));
+  setTimeout(()=>window.print(), 260);
+});
+
+})();
+</script>
+</body>
+</html>
